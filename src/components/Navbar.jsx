@@ -24,13 +24,13 @@ const Navbar = () => {
         
         {/* Logo */}
         <div className="flex items-center space-x-3">
-          <img src={logo} alt="Gurukul Logo" className="h-12 w-auto" />
+          <img src={logo} alt="Gurukul Logo" className="h-14 w-auto" />
           <div>
             <h1 className="text-white text-2xl tracking-widest font-semibold">
               GURUKUL
             </h1>
-            <p className="text-red-600 text-xs tracking-wider">
-              International School
+            <p className="text-red-600 text-xl tracking-wider">
+              Vidyapeeth
             </p>
           </div>
         </div>
