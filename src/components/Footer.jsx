@@ -9,7 +9,7 @@ export default function Footer() {
 
         {/* Logo Section */}
         <div>
-          <img src={logo} alt="School Logo" className="w-28 mb-6 rounded-full" />
+          <img src={logo} alt="School Logo" className="w-26 mb-6 rounded-full" />
           <p className="text-white text-sm">
             ISO CERTIFIED ORGANISATION
           </p>

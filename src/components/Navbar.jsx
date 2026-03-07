@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    "Home",
-    "Leadership",
-    "About Us",
-    "Admissions",
-    "Curriculum",
-    "Boarding",
-    "Beyond Academics",
-    "Careers",
-    "Contact Us",
+    { name: "Home", path: "/" },
+    { name: "Leadership", path: "/leadership" },
+    { name: "About Us", path: "/about" },
+    { name: "Admissions", path: "/admissions" },
+    { name: "Curriculum", path: "/curriculum" },
+    { name: "Boarding", path: "/boarding" },
+    { name: "Beyond Academics", path: "/beyond-academics" },
+    { name: "Careers", path: "/careers" },
+    { name: "Contact Us", path: "/contact" },
   ];
 
   return (
@@ -22,7 +24,7 @@ const Navbar = () => {
         
         {/* Logo */}
         <div className="flex items-center space-x-3">
-          <div className="text-4xl text-red-700">🛕</div>
+          <img src={logo} alt="Gurukul Logo" className="h-12 w-auto" />
           <div>
             <h1 className="text-white text-2xl tracking-widest font-semibold">
               GURUKUL
@@ -40,7 +42,7 @@ const Navbar = () => {
               key={index}
               className="relative cursor-pointer hover:text-red-600 transition duration-300 group"
             >
-              {item}
+              <Link to={item.path}>{item.name}</Link>
               <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"></span>
             </li>
           ))}
@@ -68,7 +70,7 @@ const Navbar = () => {
               className="cursor-pointer hover:text-red-600 transition duration-300"
               onClick={() => setIsOpen(false)}
             >
-              {item}
+              <Link to={item.path}>{item.name}</Link>
             </li>
           ))}
         </ul>
