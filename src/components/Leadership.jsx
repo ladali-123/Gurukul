@@ -44,11 +44,11 @@ export default function LeadershipPage() {
             "url(https://i.pinimg.com/1200x/b8/30/33/b830338598001a135a2605562d3195bd.jpg)"
         }}
       >
-        <div className="bg-black/60 w-full h-full flex items-center">
-          <div className="ml-20 bg-red-500/20 px-12 py-6 rounded-2xl">
-            <h1 className="text-5xl font-bold text-white">Leadership</h1>
-          </div>
-        </div>
+       <div className="bg-black/60 w-full h-full flex items-center justify-center">
+  <div className="bg-red-500/20 px-8 md:px-12 py-6 rounded-2xl text-center">
+    <h1 className="text-4xl md:text-5xl font-bold text-white">Leadership</h1>
+  </div>
+</div>
       </div>
 
       {/* Leaders */}

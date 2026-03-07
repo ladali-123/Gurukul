@@ -14,9 +14,9 @@ const BeyondAcademics = () => {
         />
 
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-5xl font-bold text-red-500">
-            Beyond Academics
-          </h1>
+         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-red-500 text-center">
+      Beyond Academics
+    </h1>
         </div>
       </div>
 

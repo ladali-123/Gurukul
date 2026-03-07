@@ -18,9 +18,11 @@ const Contact = () => {
   <div className="absolute inset-0 bg-black/60"></div>
 
   {/* title */}
-  <div className="absolute top-1/2 left-20 -translate-y-1/2 bg-red-500/60 backdrop-blur-sm px-10 py-4 rounded-lg">
-    <h1 className="text-4xl font-bold text-white">Contact Us</h1>
-  </div>
+ <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-500/60 backdrop-blur-sm px-6 sm:px-10 py-4 rounded-lg">
+  <h1 className="text-3xl sm:text-4xl font-bold text-white text-center">
+    Contact Us
+  </h1>
+</div>
 
 </div>
 

@@ -9,11 +9,11 @@ const About = () => {
       <section className="bg-black py-12">
         <div className="max-w-7xl mx-auto px-2 text-center">
 
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 mt-18">
             Best School in Hajipur – Gurukul
           </h2>
 
-          <div className="text-gray-300 text-lg leading-relaxed space-y-6 text-justify">
+          <div className="text-gray-300 text-lg leading-relaxed space-y-4 text-justify">
             <p>
               Established with a vision to transform education,
               <span className="text-white font-semibold"> Gurukul </span>
