@@ -24,7 +24,7 @@ const Navbar = () => {
         
         {/* Logo */}
         <div className="flex items-center space-x-3">
-          <img src={logo} alt="Gurukul Logo" className="h-14 w-auto" />
+          <img src={logo} alt="Gurukul Logo" className="h-16 w-auto" />
           <div>
             <h1 className="text-white text-2xl tracking-widest font-semibold">
               GURUKUL

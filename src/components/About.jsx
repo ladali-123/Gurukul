@@ -10,7 +10,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-2 text-center">
 
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 mt-18">
-            Best School in Hajipur – Gurukul
+            Best School in Hajipur – Gurukul Vidyapeeth
           </h2>
 
           <div className="text-gray-300 text-lg leading-relaxed space-y-4 text-justify">
@@ -50,11 +50,11 @@ const About = () => {
           {/* Left Text */}
           <div className="lg:w-1/2 text-white">
             <h2 className="text-3xl font-bold mb-6">
-              Why Gurukul School Hajipur ?
+              Why Gurukul Vidyapeeth Hajipur ?
             </h2>
 
             <p className="text-gray-300 text-lg leading-relaxed text-justify">
-             Gurukul School Hajipur is committed to providing quality education, experienced faculty, modern infrastructure, and a nurturing environment where every child feels valued and inspired to learn. We focus on academic excellence along with personality development, leadership skills, and moral values that help students succeed not only in examinations but also in real life challenges. Our balanced approach ensures students grow intellectually, socially, and emotionally, preparing them to become confident, responsible, and compassionate individuals. Through innovative teaching methods, continuous assessment, and active participation in co-curricular activities, we encourage students to think critically, communicate effectively, and develop a strong sense of discipline and integrity. At Gurukul, our goal is to empower young minds with knowledge, skills, and values that shape a bright and successful future.
+             Gurukul Vidyapeeth Hajipur is committed to providing quality education, experienced faculty, modern infrastructure, and a nurturing environment where every child feels valued and inspired to learn. We focus on academic excellence along with personality development, leadership skills, and moral values that help students succeed not only in examinations but also in real life challenges. Our balanced approach ensures students grow intellectually, socially, and emotionally, preparing them to become confident, responsible, and compassionate individuals. Through innovative teaching methods, continuous assessment, and active participation in co-curricular activities, we encourage students to think critically, communicate effectively, and develop a strong sense of discipline and integrity. At Gurukul, our goal is to empower young minds with knowledge, skills, and values that shape a bright and successful future.
             </p>
           </div>
 
@@ -94,7 +94,7 @@ const About = () => {
             </h3>
 
             <p className="text-gray-300 text-lg leading-relaxed text-justify mb-6">
-              At Gurukul School Hajipur, our vision is to provide an education
+              At Gurukul Vidyapeeth Hajipur, our vision is to provide an education
               system that empowers students with knowledge, confidence, and strong
               moral values. We believe that education is not just about academic
               achievement, but about shaping responsible citizens who contribute
