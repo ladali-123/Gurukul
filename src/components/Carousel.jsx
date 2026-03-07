@@ -10,7 +10,7 @@ const Carousel = () => {
     {
       image:
         "https://i.pinimg.com/1200x/29/28/2c/29282c24b4508f538eb2dc301f8970eb.jpg",
-      title: "Gurukul International School Bangalore",
+      title: "Gurukul Vidyapeeth School Hajipur",
       subtitle:
         "Excellence in Education with Modern Innovation & Traditional Values",
       extra: "Admissions Open 2026-27",

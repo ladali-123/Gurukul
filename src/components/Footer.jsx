@@ -60,7 +60,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10 py-6 text-center text-white text-sm">
-        © 2024 Your School Name. All Rights Reserved.
+© 2024 Gurukul Vidyapeeth School Hajipur. All Rights Reserved.
       </div>
 
     </footer>
