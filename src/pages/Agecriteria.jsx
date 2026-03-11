@@ -24,9 +24,9 @@ const AgeCriteriaHajipur = () => {
             alt="Age Criteria"
             className="w-full h-full object-cover"
           />
-          <div className="absolute top-1/2 left-16 -translate-y-1/2">
-            <div className="bg-red-700/80 px-6 py-4 rounded">
-              <h1 className="text-4xl md:text-5xl font-bold">
+          <div className="absolute top-1/2 left-1/2 md:left-16 -translate-x-1/2 md:translate-x-0 -translate-y-1/2">
+            <div className="bg-red-700/80 px-4 md:px-6 py-3 md:py-4 rounded">
+              <h1 className="text-3xl md:text-5xl font-bold text-white text-center">
                 Age Criteria for Admission
               </h1>
             </div>
@@ -44,11 +44,10 @@ const AgeCriteriaHajipur = () => {
                   <Link
                     key={item.name}  // ✅ Use item.name instead of index
                     to={item.path}
-                    className={`block px-5 py-4 border-b border-gray-800 transition ${
-                      item.name === "Age Criteria"
+                    className={`block px-5 py-4 border-b border-gray-800 transition ${item.name === "Age Criteria"
                         ? "bg-red-600 text-white font-semibold"
                         : "hover:bg-red-600"
-                    }`}
+                      }`}
                   >
                     {item.name}
                   </Link>
@@ -63,7 +62,7 @@ const AgeCriteriaHajipur = () => {
                 <h2 className="text-2xl font-bold text-red-500">
                   Age Criteria for IB Programmes
                 </h2>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   School Hajipur follows the International Baccalaureate framework, admitting students
                   across a wide age range to support continuous learning from early childhood through
                   pre-university levels.
@@ -72,14 +71,14 @@ const AgeCriteriaHajipur = () => {
                 <h3 className="text-xl font-bold text-red-400">
                   Primary Years Programme (PYP)
                 </h3>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   Typically for ages 3–12, the PYP focuses on inquiry, curiosity, and foundational skills.
                 </p>
 
                 <h3 className="text-xl font-bold text-red-400">
                   Middle Years Programme (MYP)
                 </h3>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   For ages 11–16, the MYP builds academic and personal foundations with critical thinking and global awareness.
                 </p>
 
@@ -90,7 +89,7 @@ const AgeCriteriaHajipur = () => {
                   For ages 16–19, the DP prepares students for university and future careers.
                 </p>
 
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   These age ranges are standard guidelines. Families should contact admissions for precise grade-to-age mapping at School Hajipur.
                 </p>
 

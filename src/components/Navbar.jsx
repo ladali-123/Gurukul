@@ -88,7 +88,7 @@ const Navbar = () => {
           <img src={logo} alt="Gurukul Logo" className="h-18 w-auto" />
           <div>
             <h1 className="text-white text-2xl tracking-widest font-semibold">GURUKUL</h1>
-            <p className="text-red-600 text-xl tracking-wider">Vidyapeeth</p>
+            <p className="text-white text-xl tracking-wider">Vidyapeeth</p>
           </div>
         </div>
 

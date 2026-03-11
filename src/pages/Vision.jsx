@@ -26,9 +26,9 @@ const Vision = () => {
             className="w-full h-full object-cover"
           />
 
-          <div className="absolute top-1/2 left-10 -translate-y-1/2">
-            <div className="bg-red-700/80 px-10 py-4 rounded">
-              <h1 className="text-4xl md:text-5xl font-bold">
+          <div className="absolute top-1/2 left-1/2 md:left-10 -translate-x-1/2 md:translate-x-0 -translate-y-1/2">
+            <div className="bg-red-700/80 px-6 md:px-10 py-3 md:py-4 rounded">
+              <h1 className="text-3xl md:text-5xl font-bold text-white text-center">
                 Mission Vision
               </h1>
             </div>
@@ -46,11 +46,10 @@ const Vision = () => {
                   <Link
                     key={index}
                     to={item.path}
-                     className={`block px-5 py-4 border-b border-gray-800 transition ${
-                      item.name === " Mission"
+                    className={`block px-5 py-4 border-b border-gray-800 transition ${item.name === " Mission"
                         ? "bg-red-600 text-white font-semibold"
                         : "hover:bg-red-600"
-                    }`}
+                      }`}
                   >
                     {item.name}
                   </Link>

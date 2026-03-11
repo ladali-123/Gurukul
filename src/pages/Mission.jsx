@@ -27,9 +27,11 @@ const Mission = () => {
             className="w-full h-full object-cover"
           />
 
-          <div className="absolute top-1/2 left-16 -translate-y-1/2">
-            <div className="bg-red-700/80 px-6 py-4 rounded">
-              <h1 className="text-4xl md:text-5xl font-bold">The School</h1>
+          <div className="absolute top-1/2 left-1/2 md:left-16 -translate-x-1/2 md:translate-x-0 -translate-y-1/2">
+            <div className="bg-red-700/80 px-4 md:px-6 py-3 md:py-4 rounded">
+              <h1 className="text-3xl md:text-5xl font-bold text-white text-center">
+                The School
+              </h1>
             </div>
           </div>
         </div>
@@ -45,13 +47,12 @@ const Mission = () => {
                   <Link
                     key={index}
                     to={item.path}
-                    className={`block px-5 py-4 border-b border-gray-800 transition ${
-                      item.name === "Vision"
+                    className={`block px-5 py-4 border-b border-gray-800 transition ${item.name === "Vision"
                         ? "bg-red-600 text-white font-semibold"
                         : "hover:bg-red-600"
-                    }`}
+                      }`}
                   >
-                  
+
                     {item.name}
                   </Link>
                 ))}
@@ -65,13 +66,13 @@ const Mission = () => {
                 Gurukul School Hajipur
               </h2>
 
-              <p className="text-gray-300 text-lg leading-relaxed mb-4">
-               Gurukul School was established with the vision of providing quality education and 
-               building strong character in students. It aims to nurture young minds with strong values, discipline,
+              <p className="text-gray-300 text-lg leading-relaxed mb-4 text-justify">
+                Gurukul School was established with the vision of providing quality education and
+                building strong character in students. It aims to nurture young minds with strong values, discipline,
                 and knowledge so that they can become responsible and successful individuals in society.
               </p>
 
-             
+
 
               {/* IMAGE */}
               <img
@@ -85,7 +86,7 @@ const Mission = () => {
         </section>
 
         {/* GET IN TOUCH */}
-       
+
 
       </div>
     </>

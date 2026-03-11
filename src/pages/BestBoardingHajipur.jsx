@@ -42,9 +42,9 @@ const BestBoardingHajipur = () => {
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 flex items-center">
-          <div className="bg-red-600/50 px-10 py-6 ml-10 rounded">
-            <h1 className="text-4xl md:text-5xl font-bold">
+        <div className="absolute inset-0 flex items-center justify-center md:justify-start">
+          <div className="bg-red-600/50 px-6 md:px-10 py-4 md:py-6 md:ml-10 rounded">
+            <h1 className="text-3xl md:text-5xl font-bold text-white text-center md:text-left">
               Best Boarding School in Hajipur
             </h1>
           </div>
@@ -67,11 +67,10 @@ const BestBoardingHajipur = () => {
               <Link
                 key={i}
                 to={item.path}
-                className={`block px-6 py-4 border-b border-gray-800 ${
-                  item.name === "Best Boarding School in Hajipur"
+                className={`block px-6 py-4 border-b border-gray-800 ${item.name === "Best Boarding School in Hajipur"
                     ? "bg-red-600"
                     : "hover:bg-red-600"
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>
@@ -94,7 +93,7 @@ const BestBoardingHajipur = () => {
               className="w-full h-52 object-cover rounded mb-4"
             />
 
-            <p className="text-gray-300">
+            <p className="text-gray-300 text-justify">
               A well-structured daily routine is fundamental to effective boarding
               education. Learning continues beyond classroom hours through strong
               after-school academic support that helps students consolidate
@@ -114,7 +113,7 @@ const BestBoardingHajipur = () => {
               className="w-full h-52 object-cover rounded mb-4"
             />
 
-            <p className="text-gray-300">
+            <p className="text-gray-300 text-justify">
               Counsellors are available to support students with academic stress,
               social adjustment, and emotional wellbeing. A balanced routine of
               study, recreation, and rest supports healthy development and
@@ -133,7 +132,7 @@ const BestBoardingHajipur = () => {
               className="w-full h-52 object-cover rounded mb-4"
             />
 
-            <p className="text-gray-300">
+            <p className="text-gray-300 text-justify">
               Students participate in music, dance, drama, sports, and creative
               activities that encourage teamwork, creativity, and leadership.
               Weekend enrichment activities such as cookery and arts help
@@ -152,7 +151,7 @@ const BestBoardingHajipur = () => {
               className="w-full h-52 object-cover rounded mb-4"
             />
 
-            <p className="text-gray-300">
+            <p className="text-gray-300 text-justify">
               Continuous communication with parents ensures transparency and
               reassurance. Parents stay informed about their child’s progress,
               activities, and wellbeing throughout the boarding journey.

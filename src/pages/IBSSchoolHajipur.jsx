@@ -19,15 +19,17 @@ const IBSHajipur = () => {
       <div className="pt-[90px] bg-black text-white min-h-screen">
 
         {/* HERO IMAGE */}
-        <div className="relative w-full h-[450px]">
-          <img src={aboutImg} alt="about" className="w-full h-full object-cover" />
-          <div className="absolute top-1/2 left-16 -translate-y-1/2">
-            <div className="bg-red-700/80 px-6 py-4 rounded">
-              <h1 className="text-4xl md:text-5xl font-bold">IBS School Hajipur</h1>
-            </div>
-          </div>
-        </div>
+       <div className="relative w-full h-[450px]">
+  <img src={aboutImg} alt="about" className="w-full h-full object-cover" />
 
+  <div className="absolute top-1/2 left-1/2 md:left-16 -translate-x-1/2 md:translate-x-0 -translate-y-1/2">
+    <div className="bg-red-700/80 px-4 md:px-6 py-3 md:py-4 rounded">
+      <h1 className="text-3xl md:text-5xl font-bold text-white text-center">
+        IBS School Hajipur
+      </h1>
+    </div>
+  </div>
+</div>
         {/* MAIN SECTION */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
@@ -59,7 +61,7 @@ const IBSHajipur = () => {
                 <h2 className="text-2xl md:text-3xl font-bold text-red-500 mb-4">
                   Why Choose IBS School Hajipur
                 </h2>
-                <ul className="list-disc list-inside text-gray-300 text-base leading-relaxed space-y-4">
+                <ul className="list-disc list-inside text-gray-300 text-base leading-relaxed space-y-4 text-justify">
                   <li>
                     <strong>Globally Benchmarked Curriculum:</strong> The IB curriculum encourages
                     inquiry-led, concept-driven learning, nurturing critical thinking, creativity, and

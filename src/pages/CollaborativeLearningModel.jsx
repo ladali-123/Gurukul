@@ -26,9 +26,9 @@ const CollaborativeLearningModel = () => {
             alt="Collaborative Learning Model"
             className="w-full h-full object-cover"
           />
-          <div className="absolute top-1/2 left-16 -translate-y-1/2">
-            <div className="bg-red-700/80 px-6 py-4 rounded">
-              <h1 className="text-4xl md:text-5xl font-bold">
+          <div className="absolute top-1/2 left-1/2 md:left-16 -translate-x-1/2 md:translate-x-0 -translate-y-1/2">
+            <div className="bg-red-700/80 px-4 md:px-6 py-3 md:py-4 rounded">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white text-center">
                 Collaborative Learning Model
               </h1>
             </div>
@@ -46,11 +46,10 @@ const CollaborativeLearningModel = () => {
                   <Link
                     key={item.name}
                     to={item.path}
-                    className={`block px-5 py-4 border-b border-gray-800 transition ${
-                      item.name === "Collaborative Learning Model"
-                        ? "bg-red-600 text-white font-semibold"
-                        : "hover:bg-red-600"
-                    }`}
+                    className={`block px-5 py-4 border-b border-gray-800 transition ${item.name === "Collaborative Learning Model"
+                      ? "bg-red-600 text-white font-semibold"
+                      : "hover:bg-red-600"
+                      }`}
                   >
                     {item.name}
                   </Link>
@@ -66,10 +65,10 @@ const CollaborativeLearningModel = () => {
                 <h2 className="text-2xl font-bold text-red-500">
                   Indus Humanoid Lab at School Hajipur
                 </h2>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   School Hajipur integrates advanced AI into classroom learning through the Indus Humanoid Lab and its Collaborative Learning Model. This approach represents a shift from exam-centric education to preparing students for lifelong learning, adaptability, and real-world relevance.
                 </p>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   At the core of the model is the integration of Human Intelligence, Collective Intelligence, and Artificial Intelligence, working together to create Innovative Intelligence. The goal is not just knowledge acquisition, but the transformation of knowledge into wisdom.
                 </p>
               </div>
@@ -79,16 +78,16 @@ const CollaborativeLearningModel = () => {
                 <h3 className="text-xl font-bold text-red-400">
                   Collaborative Learning Model
                 </h3>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   In this learning ecosystem, teachers, students, and AI companions work together in clearly defined roles. Educators act as mentors and facilitators, guiding inquiry, reflection, and higher-order thinking rather than just delivering facts. Classrooms become environments where students collaborate with each other and leverage technology to deepen understanding.
                 </p>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   A key innovation is the use of AI-enabled assistants — including interactive humanoid and robotics platforms — that support content delivery, personalized feedback, adaptive practice, and student engagement analysis. This allows teachers more time to mentor and coach each learner’s growth.
                 </p>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   Peer-to-peer learning is central to the model, enabling students to learn through discussions, project-based activities, and problem-solving sessions. This approach builds academic skills as well as teamwork, communication, and creativity.
                 </p>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   Overall, the Collaborative Learning Model reflects a shift toward a learner-centric approach — combining human intelligence with advanced tools and collaborative methods to create an environment where students thrive academically and personally.
                 </p>
               </div>

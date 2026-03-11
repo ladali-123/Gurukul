@@ -33,13 +33,13 @@ const GurukulSchoolOfLeadership = () => {
             alt="Gurukul School of Leadership"
             className="w-full h-full object-cover"
           />
-          <div className="absolute top-1/2 left-16 -translate-y-1/2">
-            <div className="bg-red-700/80 px-6 py-4 rounded">
-              <h1 className="text-4xl md:text-5xl font-bold">
-                Gurukul School of Leadership
-              </h1>
-            </div>
-          </div>
+         <div className="absolute top-1/2 left-1/2 md:left-16 -translate-x-1/2 md:translate-x-0 -translate-y-1/2">
+  <div className="bg-red-700/80 px-4 md:px-6 py-3 md:py-4 rounded">
+    <h1 className="text-3xl md:text-5xl font-bold text-white text-center">
+      Gurukul School of Leadership
+    </h1>
+  </div>
+</div>
         </div>
 
         {/* MAIN CONTENT */}
@@ -53,11 +53,10 @@ const GurukulSchoolOfLeadership = () => {
                   <Link
                     key={item.name}
                     to={item.path}
-                    className={`block px-5 py-4 border-b border-gray-800 transition ${
-                      item.name === "Gurukul School of Leadership"
+                    className={`block px-5 py-4 border-b border-gray-800 transition ${item.name === "Gurukul School of Leadership"
                         ? "bg-red-600 text-white font-semibold"
                         : "hover:bg-red-600"
-                    }`}
+                      }`}
                   >
                     {item.name}
                   </Link>
@@ -75,25 +74,25 @@ const GurukulSchoolOfLeadership = () => {
                   Gurukul School of Leadership
                 </h2>
 
-                <p className="leading-relaxed">
-                  At Gurukul School of Leadership, we focus on developing leaders who can inspire, 
+                <p className="leading-relaxed text-justify">
+                  At Gurukul School of Leadership, we focus on developing leaders who can inspire,
                   innovate, and influence positive change. Our approach is grounded in experiential
                   learning — blending theory with real life application so students learn not just
                   to lead others, but first to lead themselves with confidence and clarity.
                   <sup>[1]</sup>
                 </p>
 
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   Leadership development begins with self‑awareness, purpose, and resilience. Through guided reflection and hands‑on experiences, learners deepen their understanding of their strengths, values, and vision. The programme nurtures skills such as critical thinking, teamwork, effective communication, decision‑making, and ethical leadership — essential competencies for thriving in a complex world.
                   <sup>[2]</sup>
                 </p>
 
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   We integrate experiential activities, mentorship sessions, and community‑focused projects to bridge classroom learning with real‑world leadership challenges. The aim is to cultivate leaders who are adaptable, empathetic, and grounded in purpose — ready to contribute meaningfully in diverse environments and inspire positive impact.
                   <sup>[3]</sup>
                 </p>
 
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   Partnerships with organisations and industry practitioners enrich the learner journey, offering specialised workshops, assessments, and follow‑up development opportunities tailored to individual growth needs. This ensures that every participant walks away equipped with practical leadership tools and a roadmap for continuous personal and professional development.
                   <sup>[4]</sup>
                 </p>

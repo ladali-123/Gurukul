@@ -24,13 +24,13 @@ const AdmissionProcess = () => {
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 flex items-center">
-          <div className="bg-red-700/90 px-10 py-6 ml-10 rounded">
-            <h1 className="text-4xl md:text-5xl font-bold text-white">
-              Admission Process
-            </h1>
-          </div>
-        </div>
+       <div className="absolute inset-0 flex items-center justify-center md:justify-start">
+  <div className="bg-red-700/90 px-6 md:px-10 py-4 md:py-6 md:ml-10 rounded">
+    <h1 className="text-3xl md:text-5xl font-bold text-white text-center md:text-left">
+      Admission Process
+    </h1>
+  </div>
+</div>
       </section>
 
       {/* MAIN CONTENT */}
@@ -60,7 +60,7 @@ const AdmissionProcess = () => {
               Admission Process
             </h2>
 
-            <p className="text-gray-300 leading-relaxed border-l-4 border-red-600 pl-4">
+            <p className="text-gray-300 leading-relaxed border-l-4 border-red-600 pl-4 text-justify">
               Our institution welcomes students based on merit and seat
               availability. Applicants must have scored above 70% in the
               previous academic year and may be required to attend an
@@ -74,7 +74,7 @@ const AdmissionProcess = () => {
               Admissions
             </h2>
 
-            <p className="text-gray-300 leading-relaxed border-l-4 border-red-600 pl-4">
+            <p className="text-gray-300 leading-relaxed border-l-4 border-red-600 pl-4 text-justify">
               We believe in nurturing future leaders by preparing students
               for a rapidly changing world. While most admissions occur at
               the beginning of the academic year, applications are accepted
@@ -88,7 +88,7 @@ const AdmissionProcess = () => {
               Eligibility
             </h2>
 
-            <p className="text-gray-300 leading-relaxed border-l-4 border-red-600 pl-4">
+            <p className="text-gray-300 leading-relaxed border-l-4 border-red-600 pl-4 text-justify">
               The school does not discriminate based on race, religion,
               gender or nationality. Admissions are granted based on seat
               availability and the ability to provide appropriate learning
@@ -162,7 +162,7 @@ const AdmissionProcess = () => {
               </button>
 
               {open && (
-                <div className="px-10 py-6 bg-black text-white">
+                <div className="px-10 py-6 bg-black text-white text-justify">
                   Once your enquiry is submitted, our admission team will
                   review your details and contact you for counseling and
                   further admission procedures including assessment if

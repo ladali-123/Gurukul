@@ -106,9 +106,12 @@ const FactSheet = () => {
         {/* HERO IMAGE */}
         <div className="relative w-full h-[450px]">
           <img src={aboutImg} alt="about" className="w-full h-full object-cover" />
-          <div className="absolute top-1/2 left-16 -translate-y-1/2">
-            <div className="bg-red-700/80 px-6 py-4 rounded">
-              <h1 className="text-4xl md:text-5xl font-bold">Fact Sheet</h1>
+
+          <div className="absolute top-1/2 left-1/2 md:left-16 -translate-x-1/2 md:translate-x-0 -translate-y-1/2">
+            <div className="bg-red-700/80 px-4 md:px-6 py-3 md:py-4 rounded">
+              <h1 className="text-3xl md:text-5xl font-bold text-white text-center">
+                Fact Sheet
+              </h1>
             </div>
           </div>
         </div>
@@ -124,11 +127,10 @@ const FactSheet = () => {
                   <Link
                     key={index}
                     to={item.path}
-                    className={`block px-5 py-4 border-b border-gray-800 transition ${
-                      item.name === "Fact Sheet"
+                    className={`block px-5 py-4 border-b border-gray-800 transition ${item.name === "Fact Sheet"
                         ? "bg-red-600 text-white font-semibold"
                         : "hover:bg-red-600"
-                    }`}
+                      }`}
                   >
                     {item.name}
                   </Link>

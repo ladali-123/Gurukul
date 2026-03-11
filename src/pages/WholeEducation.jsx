@@ -29,9 +29,9 @@ const BeyondAcademicsWholeEducation = () => {
             alt="Beyond Academics - Whole Education"
             className="w-full h-full object-cover"
           />
-          <div className="absolute top-1/2 left-16 -translate-y-1/2">
-            <div className="bg-red-700/80 px-6 py-4 rounded">
-              <h1 className="text-4xl md:text-5xl font-bold">
+          <div className="absolute top-1/2 left-1/2 md:left-16 -translate-x-1/2 md:translate-x-0 -translate-y-1/2">
+            <div className="bg-red-700/80 px-4 md:px-6 py-4 rounded flex items-center justify-center">
+              <h1 className="text-3xl md:text-5xl font-bold text-white text-center">
                 Whole Education
               </h1>
             </div>
@@ -49,11 +49,10 @@ const BeyondAcademicsWholeEducation = () => {
                   <Link
                     key={item.name}
                     to={item.path}
-                    className={`block px-5 py-4 border-b border-gray-800 transition ${
-                      item.name === "Whole Education"
-                        ? "bg-red-600 text-white font-semibold"
-                        : "hover:bg-red-600"
-                    }`}
+                    className={`block px-5 py-4 border-b border-gray-800 transition ${item.name === "Whole Education"
+                      ? "bg-red-600 text-white font-semibold"
+                      : "hover:bg-red-600"
+                      }`}
                   >
                     {item.name}
                   </Link>
@@ -68,14 +67,14 @@ const BeyondAcademicsWholeEducation = () => {
                 <h2 className="text-2xl font-bold text-red-500">
                   Whole Education at School Hajipur
                 </h2>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   At School Hajipur, we believe in nurturing every student holistically.
                   Beyond academics, our approach focuses on developing creativity, critical thinking,
                   emotional intelligence, and leadership qualities. Students are encouraged to
                   explore their passions, engage in experiential learning, and take ownership of
                   their personal growth.
                 </p>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   Our Whole Education philosophy integrates rigorous academic learning with
                   opportunities in arts, sports, service learning, and innovative projects.
                   This ensures students graduate not only with knowledge but with the skills,

@@ -21,13 +21,16 @@ const HajipurCampus = () => {
 
         {/* HERO IMAGE */}
         <div className="relative w-full h-[450px]">
-          <img src={aboutImg} alt="about" className="w-full h-full object-cover" />
-          <div className="absolute top-1/2 left-16 -translate-y-1/2">
-            <div className="bg-red-700/80 px-6 py-4 rounded">
-              <h1 className="text-4xl md:text-5xl font-bold">Hajipur Campus</h1>
-            </div>
-          </div>
-        </div>
+  <img src={aboutImg} alt="about" className="w-full h-full object-cover" />
+
+  <div className="absolute top-1/2 left-1/2 md:left-16 -translate-x-1/2 md:translate-x-0 -translate-y-1/2">
+    <div className="bg-red-700/80 px-4 md:px-6 py-3 md:py-4 rounded">
+      <h1 className="text-3xl md:text-5xl font-bold text-white text-center">
+        Hajipur Campus
+      </h1>
+    </div>
+  </div>
+</div>
 
         {/* MAIN SECTION */}
         <section className="py-16">
@@ -65,7 +68,7 @@ const HajipurCampus = () => {
                   <h2 className="text-2xl md:text-3xl font-bold text-red-500 mb-4">
                     School Campus
                   </h2>
-                  <p className="text-gray-300 text-base leading-relaxed">
+                  <p className="text-gray-300 text-base leading-relaxed text-justify">
                     Gurukul International School, Hajipur, is spread across a lush 40+ acre
                     campus designed to inspire learning and creativity in every student.
                     The campus features state-of-the-art classrooms, modern laboratories,

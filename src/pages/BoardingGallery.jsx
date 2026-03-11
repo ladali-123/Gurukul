@@ -29,15 +29,15 @@ const BoardingGallery = () => {
 
       {/* HERO */}
       <section className="relative h-[320px] w-full">
-       <img
-  src={boardingImg}
-  alt="Boarding"
-  className="w-full h-full object-cover object-center"
-/>
+        <img
+          src={boardingImg}
+          alt="Boarding"
+          className="w-full h-full object-cover object-center"
+        />
 
-        <div className="absolute inset-0 flex items-center">
-          <div className="bg-red-700/50 px-10 py-6 ml-10 rounded">
-            <h1 className="text-4xl md:text-5xl font-bold">
+        <div className="absolute inset-0 flex items-center justify-center md:justify-start">
+          <div className="bg-red-700/50 px-6 md:px-10 py-4 md:py-6 md:ml-10 rounded">
+            <h1 className="text-3xl md:text-5xl font-bold text-white text-center md:text-left">
               Boarding Gallery
             </h1>
           </div>
@@ -60,11 +60,10 @@ const BoardingGallery = () => {
               <Link
                 key={i}
                 to={item.path}
-                className={`block px-6 py-4 border-b border-gray-800 ${
-                  item.name === "Boarding Gallery"
+                className={`block px-6 py-4 border-b border-gray-800 ${item.name === "Boarding Gallery"
                     ? "bg-red-600"
                     : "hover:bg-red-600"
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>

@@ -28,9 +28,9 @@ const HajipurTrainingResearch = () => {
             alt="Hajipur Training & Research Institute"
             className="w-full h-full object-cover"
           />
-          <div className="absolute top-1/2 left-16 -translate-y-1/2">
-            <div className="bg-red-700/80 px-6 py-4 rounded">
-              <h1 className="text-4xl md:text-5xl font-bold">
+          <div className="absolute top-1/2 left-1/2 md:left-16 -translate-x-1/2 md:translate-x-0 -translate-y-1/2">
+            <div className="bg-red-700/80 px-4 md:px-6 py-3 md:py-4 rounded">
+              <h1 className="text-3xl md:text-5xl font-bold text-white text-center">
                 Hajipur Training & Research Institute
               </h1>
             </div>
@@ -47,11 +47,10 @@ const HajipurTrainingResearch = () => {
                   <Link
                     key={item.name}
                     to={item.path}
-                    className={`block px-5 py-4 border-b border-gray-800 transition ${
-                      item.name === "Hajipur Training & Research Institute"
-                        ? "bg-red-600 text-white font-semibold"
-                        : "hover:bg-red-600"
-                    }`}
+                    className={`block px-5 py-4 border-b border-gray-800 transition ${item.name === "Hajipur Training & Research Institute"
+                      ? "bg-red-600 text-white font-semibold"
+                      : "hover:bg-red-600"
+                      }`}
                   >
                     {item.name}
                   </Link>
@@ -67,32 +66,32 @@ const HajipurTrainingResearch = () => {
                   Empowering Educators. Shaping the Future
                 </h2>
 
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   The Indus Training and Research Institute (ITARI) prepares exceptional educators who can lead, innovate, and inspire in today’s educational landscape. As a centre of excellence, ITARI nurtures reflective practitioners, design thinkers, and ethical leaders.
                 </p>
 
                 <h3 className="text-xl font-semibold text-red-400">Mission and Core Purpose</h3>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   At ITARI, every teacher is a leader and every child is a self-entrepreneur. The mission is to develop educators with pedagogical insight, socio-emotional intelligence, and a global outlook, shaping future-ready learning ecosystems with courage, creativity, and compassion.
                 </p>
 
                 <h3 className="text-xl font-semibold text-red-400">Academic Programmes</h3>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   ITARI offers globally benchmarked teacher education and certification programmes including PGDE–IBEC, M.A.Ed.–IBEC, CIDTL, PGD in Early Childhood Education, and IBEC with the University of Windsor. All embed inquiry-based pedagogies, reflective practice, AI-assisted learning, and international professional standards.
                 </p>
 
                 <h3 className="text-xl font-semibold text-red-400">Signature Learning Model</h3>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   ITARI uses the 10–20–70 model: 10% formal learning, 20% self-directed learning, 70% experiential and collaborative learning. Key activities include school-based placements, microteaching, interdisciplinary design labs, professional portfolios, and leadership workshops.
                 </p>
 
                 <h3 className="text-xl font-semibold text-red-400">Thought Leadership and Impact</h3>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   ITARI is a catalyst for educational transformation, offering integrated UK + IB + Cambridge certification pathways, faculty-led innovation, and AI/SEL-integrated teacher preparation models.
                 </p>
 
                 <h3 className="text-xl font-semibold text-red-400">Strategic Vision</h3>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   ITARI aims to become a pan-Asian leader in future-ready teacher education through transnational partnerships, AI-driven platforms, customised CPD, leadership programmes, and knowledge-sharing initiatives.
                 </p>
               </div>

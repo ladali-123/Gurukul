@@ -25,13 +25,13 @@ const GurukulCommunitySchool = () => {
             alt="Gurukul Community School"
             className="w-full h-full object-cover"
           />
-          <div className="absolute top-1/2 left-16 -translate-y-1/2">
-            <div className="bg-red-700/80 px-6 py-4 rounded">
-              <h1 className="text-4xl md:text-5xl font-bold">
-                Gurukul Community School
-              </h1>
-            </div>
-          </div>
+         <div className="absolute top-1/2 left-1/2 md:left-16 -translate-x-1/2 md:translate-x-0 -translate-y-1/2">
+  <div className="bg-red-700/80 px-4 md:px-6 py-3 md:py-4 rounded">
+    <h1 className="text-3xl md:text-5xl font-bold text-white text-center">
+      Gurukul Community School
+    </h1>
+  </div>
+</div>
         </div>
 
         {/* MAIN CONTENT */}
@@ -75,7 +75,7 @@ const GurukulCommunitySchool = () => {
               </div>
 
               {/* TEXT BELOW IMAGE */}
-              <p className="leading-relaxed">
+              <p className="leading-relaxed text-justify">
                 The Indus International Community School fosters meaningful interaction between students from diverse socio-economic backgrounds, promoting cross-cultural understanding, empathy, and reciprocal growth. Through structured learning experiences and inclusive pedagogies, students develop into socially conscious and globally aware individuals.
               </p>
 
@@ -89,7 +89,7 @@ const GurukulCommunitySchool = () => {
               </div>
 
               {/* TEXT BELOW SECOND IMAGE */}
-              <p className="leading-relaxed">
+              <p className="leading-relaxed text-justify">
                 Emphasis is placed on inclusive learning, project-based activities, and community engagement. Students gain practical skills, interpersonal awareness, and leadership competencies essential for thriving in diverse environments.
               </p>
 

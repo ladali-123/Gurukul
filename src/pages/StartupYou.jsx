@@ -26,9 +26,9 @@ const StartupYou = () => {
             alt="Startup You Program"
             className="w-full h-full object-cover"
           />
-          <div className="absolute top-1/2 left-16 -translate-y-1/2">
-            <div className="bg-red-700/80 px-6 py-4 rounded">
-              <h1 className="text-4xl md:text-5xl font-bold">
+          <div className="absolute top-1/2 left-1/2 md:left-16 -translate-x-1/2 md:translate-x-0 -translate-y-1/2">
+            <div className="bg-red-700/80 px-4 md:px-6 py-3 md:py-4 rounded">
+              <h1 className="text-3xl md:text-5xl font-bold text-white text-center">
                 Startup You
               </h1>
             </div>
@@ -46,11 +46,10 @@ const StartupYou = () => {
                   <Link
                     key={item.name}
                     to={item.path}
-                    className={`block px-5 py-4 border-b border-gray-800 transition ${
-                      item.name === "Startup You"
+                    className={`block px-5 py-4 border-b border-gray-800 transition ${item.name === "Startup You"
                         ? "bg-red-600 text-white font-semibold"
                         : "hover:bg-red-600"
-                    }`}
+                      }`}
                   >
                     {item.name}
                   </Link>
@@ -66,24 +65,24 @@ const StartupYou = () => {
                 <h2 className="text-2xl font-bold text-red-500">
                   Startup You – Nurturing Young Innovators
                 </h2>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   The Startup You program at School Hajipur empowers students to think like entrepreneurs,
                   develop innovative solutions, and take ownership of projects from concept to execution.
                   It bridges classroom learning with real-world problem-solving, preparing students for future
                   careers in technology, business, and social enterprise.
                 </p>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   Through hands-on projects, mentorship, and exposure to industry practices, students cultivate
                   creativity, leadership, critical thinking, and resilience. The program encourages them to
                   explore opportunities, test ideas, and learn from both success and failure.
                 </p>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-justify">
                   Startup You emphasizes collaboration, teamwork, and effective communication, ensuring that
                   students gain experience in pitching ideas, working in diverse groups, and managing projects
                   end-to-end. The program instills confidence and equips students with a practical understanding
                   of entrepreneurship.
                 </p>
-                
+
               </div>
 
               {/* STARTUP IMAGE */}

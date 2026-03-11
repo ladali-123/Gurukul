@@ -33,14 +33,16 @@ const ParentAdvisory = () => {
 
         {/* HERO IMAGE */}
         <div className="relative w-full h-[450px]">
-          <img src={aboutImg} alt="About Gurukul" className="w-full h-full object-cover" />
-          <div className="absolute top-1/2 left-16 -translate-y-1/2">
-            <div className="bg-red-700/80 px-6 py-4 rounded">
-              <h1 className="text-4xl md:text-5xl font-bold">Parents Advisory Committee</h1>
-            </div>
-          </div>
-        </div>
+  <img src={aboutImg} alt="About Gurukul" className="w-full h-full object-cover" />
 
+  <div className="absolute top-1/2 left-1/2 md:left-16 -translate-x-1/2 md:translate-x-0 -translate-y-1/2">
+    <div className="bg-red-700/80 px-4 md:px-6 py-3 md:py-4 rounded">
+      <h1 className="text-3xl md:text-5xl font-bold text-white text-center">
+        Parents Advisory Committee
+      </h1>
+    </div>
+  </div>
+</div>
         {/* MAIN SECTION */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">

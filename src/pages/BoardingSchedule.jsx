@@ -42,9 +42,9 @@ const BoardingSchedule = () => {
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 flex items-center">
-          <div className="bg-red-700/90 px-10 py-6 ml-10 rounded">
-            <h1 className="text-4xl md:text-5xl font-bold">
+        <div className="absolute inset-0 flex items-center justify-center md:justify-start">
+          <div className="bg-red-700/90 px-6 md:px-10 py-4 md:py-6 md:ml-10 rounded">
+            <h1 className="text-3xl md:text-5xl font-bold text-white text-center md:text-left">
               Boarding Schedule
             </h1>
           </div>
@@ -67,11 +67,10 @@ const BoardingSchedule = () => {
               <Link
                 key={i}
                 to={item.path}
-                className={`block px-6 py-4 border-b border-gray-800 ${
-                  item.name === "Boarding Schedule"
+                className={`block px-6 py-4 border-b border-gray-800 ${item.name === "Boarding Schedule"
                     ? "bg-red-600"
                     : "hover:bg-red-600"
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>
