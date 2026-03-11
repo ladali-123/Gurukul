@@ -53,11 +53,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/leadership" element={<Leadership />} />
-        <Route path="/admissions" element={<Admissionsfaq />} />
+        <Route path="/admissions" element={<AdmissionProcess />} />
         <Route path="/contact" element={<Contactus />} />
-        <Route path="/boarding" element={<Boarding />} />
+        <Route path="/boarding" element={<BestBoardingHajipur />} />
         <Route path="/careers" element={<Careers />} />
-        <Route path="/beyond-academics" element={<BeyondAcademics />} />
+        <Route path="/beyond-academics" element={<WholeEducation />} />
         <Route path="/curriculum" element={<Curriculum />} />
         
         {/* New Routes for About Us Dropdown */}
