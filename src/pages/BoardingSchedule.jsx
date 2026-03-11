@@ -1,203 +1,139 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import boardingImg from "../assets/boarding.jpg";
+
+const boardingDropdownItems = [
+  { name: "Best Boarding School in Hajipur", path: "/boarding/best-boarding-hajipur" },
+  { name: "Boarding Schedule", path: "/boarding/schedule" },
+  { name: "Boarding Gallery", path: "/boarding/gallery" },
+];
+
+const schedule = [
+  { no: 1, time: "5:45", activity: "Wake Up Call" },
+  { no: 2, time: "5:55 - 6:10", activity: "Wash and change for morning activity" },
+  { no: 3, time: "6:15 - 6:45", activity: "Morning Activity" },
+  { no: 4, time: "6:45 - 7:30", activity: "Change, Shower and Get Ready for School" },
+  { no: 5, time: "7:30 - 8:00", activity: "Breakfast" },
+  { no: 6, time: "8:00 - 3:15", activity: "Students are in School" },
+  { no: 7, time: "3:15 - 3:30", activity: "Students Return to Boarding" },
+  { no: 8, time: "3:30 - 3:45", activity: "Change for Sports" },
+  { no: 9, time: "3:45 - 5:00", activity: "Sports" },
+  { no: 10, time: "5:00 - 5:15", activity: "Tuck Shop / CCD" },
+  { no: 11, time: "5:15 - 5:45", activity: "Snacks, Change and Shower" },
+  { no: 12, time: "5:45 - 6:00", activity: "Students Leave Hostel for Prep" },
+  { no: 13, time: "6:00 - 7:30", activity: "1st Study Hour" },
+  { no: 14, time: "7:30 - 8:00", activity: "Dinner" },
+  { no: 15, time: "8:00 - 8:30", activity: "Phone Calls as per Schedule" },
+  { no: 16, time: "8:30 - 8:45", activity: "Free Time" },
+  { no: 17, time: "8:45 - 10:00", activity: "Second Study Hour" },
+  { no: 18, time: "10:00 - 10:30", activity: "Laptop Collection / Get Ready for Bed" },
+  { no: 19, time: "10:30", activity: "Lights Off" },
+];
 
 const BoardingSchedule = () => {
-  const weekdaySchedule = [
-    { time: "5:30 AM", activity: "Wake Up & Freshen Up" },
-    { time: "5:45 AM", activity: "Morning Exercise / Yoga" },
-    { time: "6:15 AM", activity: "Meditation & Prayer" },
-    { time: "6:45 AM", activity: "Breakfast" },
-    { time: "7:30 AM", activity: "Morning Assembly" },
-    { time: "8:00 AM - 1:00 PM", activity: "Academic Classes (Period 1-5)" },
-    { time: "1:00 PM", activity: "Lunch Break" },
-    { time: "2:00 PM - 3:30 PM", activity: "Academic Classes (Period 6-7)" },
-    { time: "3:30 PM - 4:00 PM", activity: "Snack Break" },
-    { time: "4:00 PM - 5:30 PM", activity: "Sports & Activities" },
-    { time: "5:30 PM - 6:00 PM", activity: "Evening Tea & Rest" },
-    { time: "6:00 PM - 7:00 PM", activity: "Self Study / Homework" },
-    { time: "7:00 PM", activity: "Dinner" },
-    { time: "7:45 PM - 9:00 PM", activity: "Evening Study / Library" },
-    { time: "9:00 PM - 9:30 PM", activity: "Personal Time" },
-    { time: "9:30 PM", activity: "Bedtime Prayer" },
-    { time: "10:00 PM", activity: "Lights Out" },
-  ];
-
-  const weekendSchedule = [
-    { time: "6:00 AM", activity: "Wake Up & Freshen Up" },
-    { time: "6:30 AM", activity: "Morning Exercise" },
-    { time: "7:30 AM", activity: "Breakfast" },
-    { time: "8:30 AM - 11:30 AM", activity: "Academic Support / Tutoring" },
-    { time: "11:30 AM - 1:00 PM", activity: "Sports Activities" },
-    { time: "1:00 PM", activity: "Lunch" },
-    { time: "2:00 PM - 4:00 PM", activity: "Club Activities / Hobbies" },
-    { time: "4:00 PM - 6:00 PM", activity: "Outdoor Games" },
-    { time: "6:00 PM", activity: "Evening Snacks" },
-    { time: "6:30 PM - 8:00 PM", activity: "Weekend Study" },
-    { time: "8:00 PM", activity: "Dinner" },
-    { time: "9:00 PM - 10:00 PM", activity: "Movie Night / Entertainment" },
-    { time: "10:30 PM", activity: "Lights Out" },
-  ];
-
   return (
-    <div className="bg-black text-white">
-      {/* HERO SECTION */}
-      <div className="relative h-[400px]">
+    <div className="bg-black text-white pt-[90px]">
+
+      {/* HERO */}
+      <section className="relative h-[320px] w-full">
         <img
-          src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2070"
-          className="w-full h-full object-cover opacity-60"
+          src={boardingImg}
           alt="Boarding Schedule"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-5xl font-bold text-red-500">
-            Boarding Schedule
-          </h1>
+
+        <div className="absolute inset-0 flex items-center">
+          <div className="bg-red-700/90 px-10 py-6 ml-10 rounded">
+            <h1 className="text-4xl md:text-5xl font-bold">
+              Boarding Schedule
+            </h1>
+          </div>
         </div>
+      </section>
+
+      {/* BREADCRUMB */}
+      <div className="max-w-7xl mx-auto px-6 py-4 text-gray-400">
+        Home &gt; Boarding &gt; Boarding Schedule
       </div>
 
-      {/* INTRODUCTION */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-bold text-red-500 mb-6 text-center">
-          Daily Routine at Gurukul
-        </h2>
-        <p className="text-gray-300 leading-8 max-w-3xl mx-auto">
-          Our well-structured boarding schedule ensures a perfect balance between
-          academic studies, physical activities, and personal development. Each
-          day is carefully planned to maximize learning while ensuring adequate
-          rest and recreation for the overall well-being of our students.
-        </p>
-      </section>
+      {/* MAIN */}
+      <section className="max-w-7xl mx-auto px-6 pb-20 grid md:grid-cols-4 gap-10">
 
-      {/* WEEKDAY SCHEDULE */}
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl text-red-500 font-bold text-center mb-12">
-            Weekday Schedule (Monday - Friday)
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-4">
-              {weekdaySchedule.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col md:flex-row md:items-center bg-black p-6 rounded-lg border border-gray-800 hover:border-red-600 transition duration-300"
-                >
-                  <div className="md:w-48 flex-shrink-0">
-                    <span className="text-red-500 font-bold text-lg">
-                      {item.time}
-                    </span>
-                  </div>
-                  <div className="flex-grow">
-                    <span className="text-gray-300 text-lg">
-                      {item.activity}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+        {/* SIDEBAR */}
+        <div className="md:col-span-1">
+          <div className="border border-gray-800">
 
-      {/* WEEKEND SCHEDULE */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-4xl text-red-500 font-bold text-center mb-12">
-          Weekend Schedule (Saturday - Sunday)
-        </h2>
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-4">
-            {weekendSchedule.map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col md:flex-row md:items-center bg-gray-900 p-6 rounded-lg border border-gray-800 hover:border-red-600 transition duration-300"
+            {boardingDropdownItems.map((item, i) => (
+              <Link
+                key={i}
+                to={item.path}
+                className={`block px-6 py-4 border-b border-gray-800 ${
+                  item.name === "Boarding Schedule"
+                    ? "bg-red-600"
+                    : "hover:bg-red-600"
+                }`}
               >
-                <div className="md:w-48 flex-shrink-0">
-                  <span className="text-red-500 font-bold text-lg">
-                    {item.time}
-                  </span>
-                </div>
-                <div className="flex-grow">
-                  <span className="text-gray-300 text-lg">
-                    {item.activity}
-                  </span>
-                </div>
-              </div>
+                {item.name}
+              </Link>
             ))}
+
           </div>
         </div>
-      </section>
 
-      {/* IMPORTANT NOTES */}
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl text-red-500 font-bold text-center mb-12">
-            Important Information
+        {/* CONTENT */}
+        <div className="md:col-span-3">
+
+          <h2 className="text-3xl font-bold text-red-500 mb-6">
+            Week Days Schedule (Monday to Friday)
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-black p-8 rounded-lg border border-gray-800">
-              <h3 className="text-2xl text-red-400 mb-4 font-semibold">
-                Academic Support
-              </h3>
-              <ul className="text-gray-300 space-y-3">
-                <li>• Extra classes for weak students</li>
-                <li>• One-on-one mentoring</li>
-                <li>• Library access during study hours</li>
-                <li>• Computer lab access</li>
-              </ul>
-            </div>
-            <div className="bg-black p-8 rounded-lg border border-gray-800">
-              <h3 className="text-2xl text-red-400 mb-4 font-semibold">
-                Activities & Sports
-              </h3>
-              <ul className="text-gray-300 space-y-3">
-                <li>• Football, Cricket, Basketball</li>
-                <li>• Swimming pool access</li>
-                <li>• Indoor games (Table Tennis, Chess, Carrom)</li>
-                <li>• Music, Dance, Art & Craft</li>
-              </ul>
-            </div>
-            <div className="bg-black p-8 rounded-lg border border-gray-800">
-              <h3 className="text-2xl text-red-400 mb-4 font-semibold">
-                Health & Wellness
-              </h3>
-              <ul className="text-gray-300 space-y-3">
-                <li>• Regular health checkups</li>
-                <li>• On-campus medical facility</li>
-                <li>• Counseling services</li>
-                <li>• Balanced nutritional meals</li>
-              </ul>
-            </div>
-            <div className="bg-black p-8 rounded-lg border border-gray-800">
-              <h3 className="text-2xl text-red-400 mb-4 font-semibold">
-                Parent Communication
-              </h3>
-              <ul className="text-gray-300 space-y-3">
-                <li>• Weekly phone calls to parents</li>
-                <li>• Regular progress reports</li>
-                <li>• Parent-teacher meetings</li>
-                <li>• Video calling facility</li>
-              </ul>
-            </div>
+
+          <div className="overflow-x-auto">
+
+            <table className="w-full border border-gray-700">
+
+              <thead className="bg-red-600 text-white">
+                <tr>
+                  <th className="p-3 border border-gray-700">No</th>
+                  <th className="p-3 border border-gray-700">Time</th>
+                  <th className="p-3 border border-gray-700">Activity</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                {schedule.map((item) => (
+
+                  <tr
+                    key={item.no}
+                    className="text-gray-300 hover:bg-gray-900"
+                  >
+                    <td className="p-3 border border-gray-700 text-center">
+                      {item.no}
+                    </td>
+
+                    <td className="p-3 border border-gray-700">
+                      {item.time}
+                    </td>
+
+                    <td className="p-3 border border-gray-700">
+                      {item.activity}
+                    </td>
+                  </tr>
+
+                ))}
+
+              </tbody>
+
+            </table>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* CTA */}
-      <section className="max-w-7xl mx-auto px-6 py-20 text-center">
-        <h2 className="text-4xl font-bold text-red-500 mb-6">
-          Experience Our Structured Lifestyle
-        </h2>
-        <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-          Visit our campus to see our boarding facilities and learn more about
-          our daily schedule.
-        </p>
-        <a
-          href="/enquiry-form"
-          className="inline-block bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition duration-300"
-        >
-          Schedule a Visit
-        </a>
-      </section>
     </div>
   );
 };
 
 export default BoardingSchedule;
-

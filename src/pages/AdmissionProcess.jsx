@@ -1,202 +1,182 @@
-import React from "react";
+
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import admissionImg from "../assets/admission.jpg";
+
+const admissionsDropdownItems = [
+  { name: "Admission Process", path: "/admission-process" },
+  { name: "Enquiry Form", path: "/enquiry-form" },
+  { name: "FAQs", path: "/faqs" },
+  { name: "Testimonials", path: "/testimonials" },
+];
 
 const AdmissionProcess = () => {
-  const steps = [
-    {
-      number: "01",
-      title: "Submit Enquiry",
-      description: "Fill out the enquiry form with your details and course interest. Our team will review your application and get in touch with you.",
-      icon: "📝"
-    },
-    {
-      number: "02",
-      title: "Counselor Consultation",
-      description: "Our experienced counselors will contact you to discuss your goals, answer your questions, and guide you through the admission process.",
-      icon: "📞"
-    },
-    {
-      number: "03",
-      title: "Visit Campus",
-      description: "Schedule a visit to our campus to meet our faculty, explore facilities, and experience the learning environment firsthand.",
-      icon: "🏫"
-    },
-    {
-      number: "04",
-      title: "Application & Assessment",
-      description: "Complete the application form and attend the entrance assessment (if required for your chosen program).",
-      icon: "📋"
-    },
-    {
-      number: "05",
-      title: "Admission Confirmation",
-      description: "Upon successful assessment, receive your admission offer and complete the registration process to secure your seat.",
-      icon: "✅"
-    },
-    {
-      number: "06",
-      title: "Join Gurukul",
-      description: "Attend orientation, meet your teachers and classmates, and begin your exciting learning journey with us!",
-      icon: "🚀"
-    }
-  ];
-
-  const requirements = [
-    { title: "Age Criteria", description: "Minimum age as per class requirements", path: "/age-criteria" },
-    { title: "Previous Records", description: "Academic transcripts from previous school", path: "/admissions" },
-    { title: "Documents", description: "Birth certificate, photographs, ID proofs", path: "/admissions" },
-    { title: "Transfer Certificate", description: "TC from previous school (if applicable)", path: "/admissions" }
-  ];
+  const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-black text-white min-h-screen pt-[90px]">
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-red-900 via-red-800 to-red-900 opacity-90"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920')] bg-cover bg-center opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-6 text-center pt-10">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Admission Process
-          </h1>
-          <p className="text-xl text-gray-200 max-w-2xl mx-auto mb-8">
-            Your journey to quality education begins here. Follow our simple step-by-step admission process to join the Gurukul Vidyapeeth family.
-          </p>
-          <Link 
-            to="/enquiry-form" 
-            className="inline-block bg-white text-red-800 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300"
-          >
-            Start Your Application
-          </Link>
+    <div className="bg-black text-white pt-[90px]">
+
+      {/* HERO SECTION */}
+      <section className="relative h-[350px] w-full">
+        <img
+          src={admissionImg}
+          alt="Admission"
+          className="w-full h-full object-cover"
+        />
+
+        <div className="absolute inset-0 flex items-center">
+          <div className="bg-red-700/90 px-10 py-6 ml-10 rounded">
+            <h1 className="text-4xl md:text-5xl font-bold text-white">
+              Admission Process
+            </h1>
+          </div>
         </div>
       </section>
 
-      {/* Process Steps */}
-      <section className="py-20 bg-gray-950">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            How to Apply
-          </h2>
-          <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
-            We have streamlined our admission process to make it as simple and straightforward as possible for you.
-          </p>
+      {/* MAIN CONTENT */}
+      <section className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-4 gap-10">
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {steps.map((step, index) => (
-              <div 
+        {/* SIDEBAR MENU */}
+        <div className="md:col-span-1">
+          <div className="border border-gray-800">
+            {admissionsDropdownItems.map((item, index) => (
+              <Link
                 key={index}
-                className="bg-gray-900 p-8 rounded-2xl border border-gray-800 hover:border-red-600 transition duration-300 group"
+                to={item.path}
+                className="block px-6 py-4 border-b border-gray-800 hover:bg-red-600 transition"
               >
-                <div className="flex items-start justify-between mb-4">
-                  <span className="text-5xl font-bold text-red-600 opacity-50 group-hover:opacity-100 transition">
-                    {step.number}
-                  </span>
-                  <span className="text-4xl">{step.icon}</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-white">
-                  {step.title}
-                </h3>
-                <p className="text-gray-400 leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
+                {item.name}
+              </Link>
             ))}
           </div>
         </div>
-      </section>
 
-      {/* Requirements Section */}
-      <section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                What You Need
-              </h2>
-              <p className="text-gray-400 text-lg mb-8">
-                To complete the admission process, please ensure you have the following documents and information ready.
-              </p>
-              <div className="space-y-4">
-                {requirements.map((req, index) => (
-                  <div 
-                    key={index}
-                    className="flex items-center p-4 bg-gray-900 rounded-lg border border-gray-800 hover:border-red-600 transition duration-300"
-                  >
-                    <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-white font-bold">{index + 1}</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-white">{req.title}</h4>
-                      <p className="text-gray-400 text-sm">{req.description}</p>
-                    </div>
-                  </div>
-                ))}
+        {/* RIGHT CONTENT */}
+        <div className="md:col-span-3 space-y-10">
+
+          {/* Admission Process */}
+          <div>
+            <h2 className="text-3xl font-bold mb-4 text-red-500">
+              Admission Process
+            </h2>
+
+            <p className="text-gray-300 leading-relaxed border-l-4 border-red-600 pl-4">
+              Our institution welcomes students based on merit and seat
+              availability. Applicants must have scored above 70% in the
+              previous academic year and may be required to attend an
+              admission test depending on the grade level.
+            </p>
+          </div>
+
+          {/* Admissions */}
+          <div>
+            <h2 className="text-3xl font-bold mb-4 text-red-500">
+              Admissions
+            </h2>
+
+            <p className="text-gray-300 leading-relaxed border-l-4 border-red-600 pl-4">
+              We believe in nurturing future leaders by preparing students
+              for a rapidly changing world. While most admissions occur at
+              the beginning of the academic year, applications are accepted
+              throughout the year based on seat availability.
+            </p>
+          </div>
+
+          {/* Eligibility */}
+          <div>
+            <h2 className="text-3xl font-bold mb-4 text-red-500">
+              Eligibility
+            </h2>
+
+            <p className="text-gray-300 leading-relaxed border-l-4 border-red-600 pl-4">
+              The school does not discriminate based on race, religion,
+              gender or nationality. Admissions are granted based on seat
+              availability and the ability to provide appropriate learning
+              support to each student.
+            </p>
+          </div>
+
+          {/* HOW TO APPLY */}
+          <div>
+            <h2 className="text-3xl font-bold mb-6 text-red-500">
+              How To Apply
+            </h2>
+
+            {/* 1. ENQUIRY (Always Open) */}
+            <div className="border border-gray-400 mb-4">
+
+              <div className="bg-gray-900 text-white px-6 py-4 font-semibold text-lg">
+                1. Enquiry
               </div>
-            </div>
-            <div className="relative">
-              <div className="bg-gray-900 p-8 rounded-2xl border border-red-600/30">
-                <h3 className="text-2xl font-bold mb-6">Important Notes</h3>
-                <ul className="space-y-4 text-gray-300">
-                  <li className="flex items-start">
-                    <span className="text-red-600 mr-3">▸</span>
-                    <span>Admissions are open for Academic Year 2024-25</span>
+
+              <div className="bg-black px-10 py-8 text-white">
+
+                <h3 className="text-xl font-semibold text-white mb-6">
+                  To make an enquiry or schedule an appointment:
+                </h3>
+
+                <ul className="space-y-6 mb-8">
+
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-white rounded-full mr-4"></span>
+                    <span>
+                      <strong>Email:</strong> admissions@indusschool.com
+                    </span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-red-600 mr-3">▸</span>
-                    <span>Limited seats available in each grade</span>
+
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-white rounded-full mr-4"></span>
+                    <span>
+                      <strong>Telephone:</strong> +91-80-22895913
+                    </span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-red-600 mr-3">▸</span>
-                    <span>Entrance assessment is conducted for Grade 9 & above</span>
+
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-white rounded-full mr-4"></span>
+                    <span>
+                      <strong>Telephone:</strong> +91-9886268567
+                    </span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-red-600 mr-3">▸</span>
-                    <span>Early application is recommended for better seat availability</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-600 mr-3">▸</span>
-                    <span>Our admission team is available for personalized guidance</span>
-                  </li>
+
                 </ul>
-                <div className="mt-8 pt-6 border-t border-gray-800">
-                  <p className="text-gray-400 mb-4">Have questions? Our counselors are here to help!</p>
-                  <Link 
-                    to="/contact" 
-                    className="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300"
-                  >
-                    Contact Us
-                  </Link>
-                </div>
+
+                <Link
+                  to="/enquiry-form"
+                  className="bg-white rounded-xl text-black px-8 py-3 font-semibold hover:bg-gray-500 transition"
+                >
+                  Click for Enquiry Form
+                </Link>
+
               </div>
             </div>
+
+            {/* 2. ADMISSIONS APPROVAL PROCESS (Dropdown) */}
+            <div className="border border-gray-500">
+
+              <button
+                onClick={() => setOpen(!open)}
+                className="w-full flex justify-between items-center px-6 py-4 bg-black text-white font-semibold"
+              >
+                <span>2. Admissions Approval Process</span>
+                <span>{open ? "▲" : "▼"}</span>
+              </button>
+
+              {open && (
+                <div className="px-10 py-6 bg-black text-white">
+                  Once your enquiry is submitted, our admission team will
+                  review your details and contact you for counseling and
+                  further admission procedures including assessment if
+                  required.
+                </div>
+              )}
+
+            </div>
+
           </div>
+
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-900 to-red-700">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Begin?
-          </h2>
-          <p className="text-xl text-gray-200 mb-8">
-            Take the first step towards your child's bright future. Apply now and join our community of achievers.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/enquiry-form" 
-              className="bg-white text-red-800 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300"
-            >
-              Fill Enquiry Form
-            </Link>
-            <Link 
-              to="/faqs" 
-              className="bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-red-800 transition duration-300"
-            >
-              View FAQs
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

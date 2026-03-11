@@ -1,166 +1,205 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import boardingImg from "../assets/boarding.jpg";
+
+const boardingDropdownItems = [
+  { name: "Best Boarding School in Hajipur", path: "/boarding/best-boarding-hajipur" },
+  { name: "Boarding Schedule", path: "/boarding/schedule" },
+  { name: "Boarding Gallery", path: "/boarding/gallery" },
+];
+
+const faqs = [
+  {
+    q: "What makes a boarding school one of the best in Hajipur?",
+    a: "A great boarding school provides a safe residential environment, structured routines, strong academics, extracurricular opportunities, and emotional support systems."
+  },
+  {
+    q: "How are students supported emotionally in boarding?",
+    a: "Full-time counsellors and house parents guide students through academic pressure, social adjustments, and personal development."
+  },
+  {
+    q: "Is medical care available on campus?",
+    a: "Yes. Boarding students are supported by an on-campus medical team and residential doctor to ensure prompt care and health monitoring."
+  }
+];
 
 const BestBoardingHajipur = () => {
+
+  const [open, setOpen] = useState(null);
+
+  const toggle = (i) => {
+    setOpen(open === i ? null : i);
+  };
+
   return (
-    <div className="bg-black text-white">
-      {/* HERO SECTION */}
-      <div className="relative h-[400px]">
+    <div className="bg-black text-white pt-[90px]">
+
+      {/* HERO */}
+      <section className="relative h-[320px] w-full">
         <img
-          src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=2070"
-          className="w-full h-full object-cover opacity-60"
-          alt="Best Boarding School in Hajipur"
+          src={boardingImg}
+          alt="Boarding"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-5xl font-bold text-red-500">
-            Best Boarding School in Hajipur
-          </h1>
+
+        <div className="absolute inset-0 flex items-center">
+          <div className="bg-red-600/50 px-10 py-6 ml-10 rounded">
+            <h1 className="text-4xl md:text-5xl font-bold">
+              Best Boarding School in Hajipur
+            </h1>
+          </div>
         </div>
+      </section>
+
+      {/* BREADCRUMB */}
+      <div className="max-w-7xl mx-auto px-6 py-4 text-gray-400">
+        Home &gt; Boarding &gt; Best Boarding School in Hajipur
       </div>
 
-      {/* INTRODUCTION */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-bold text-red-500 mb-6 text-center">
-          Excellence in Boarding Education
-        </h2>
-        <p className="text-gray-300 leading-8 max-w-3xl mx-auto">
-          Gurukul Vidyapeeth is recognized as the best boarding school in Hajipur,
-          offering a world-class residential education experience. Our campus provides
-          a perfect blend of academic excellence, character building, and holistic
-          development. With state-of-the-art infrastructure, experienced faculty,
-          and a nurturing environment, we prepare students to become leaders of tomorrow.
-        </p>
-        <p className="text-gray-300 leading-8 max-w-3xl mx-auto mt-4">
-          Located in the serene surroundings of Hajipur, our boarding facility offers
-          students a safe, disciplined, and inspiring atmosphere where they can focus
-          on their studies while developing essential life skills.
-        </p>
-      </section>
+      {/* MAIN */}
+      <section className="max-w-7xl mx-auto px-6 pb-20 grid md:grid-cols-4 gap-10">
 
-      {/* WHY CHOOSE US */}
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl text-red-500 font-bold text-center mb-12">
-            Why We Are the Best in Hajipur
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-black p-8 rounded-lg border border-gray-800">
-              <h3 className="text-xl text-red-400 mb-3 font-semibold">
-                Expert Faculty
-              </h3>
-              <p className="text-gray-300">
-                Our experienced and qualified teachers provide personalized attention
-                to each student, ensuring academic excellence.
-              </p>
-            </div>
-            <div className="bg-black p-8 rounded-lg border border-gray-800">
-              <h3 className="text-xl text-red-400 mb-3 font-semibold">
-                Modern Infrastructure
-              </h3>
-              <p className="text-gray-300">
-                Well-equipped classrooms, libraries, laboratories, and sports
-                facilities provide the perfect learning environment.
-              </p>
-            </div>
-            <div className="bg-black p-8 rounded-lg border border-gray-800">
-              <h3 className="text-xl text-red-400 mb-3 font-semibold">
-                Holistic Development
-              </h3>
-              <p className="text-gray-300">
-                Focus on academics, sports, arts, and character building to
-                develop well-rounded individuals.
-              </p>
-            </div>
+        {/* SIDEBAR */}
+        <div className="md:col-span-1">
+          <div className="border border-gray-800">
+
+            {boardingDropdownItems.map((item, i) => (
+              <Link
+                key={i}
+                to={item.path}
+                className={`block px-6 py-4 border-b border-gray-800 ${
+                  item.name === "Best Boarding School in Hajipur"
+                    ? "bg-red-600"
+                    : "hover:bg-red-600"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+
           </div>
         </div>
-      </section>
 
-      {/* FACILITIES */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-4xl text-red-500 font-bold text-center mb-12">
-          Our Boarding Facilities
-        </h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gray-900 p-8 rounded-lg">
-            <h3 className="text-2xl text-red-400 mb-4 font-semibold">
-              Comfortable Accommodation
-            </h3>
-            <ul className="text-gray-300 space-y-2">
-              <li>• Spacious and well-ventilated rooms</li>
-              <li>• Separate accommodation for boys and girls</li>
-              <li>• 24/7 security and supervision</li>
-              <li>• Clean and hygienic living spaces</li>
-              <li>• Housekeeping services</li>
-            </ul>
+        {/* CONTENT */}
+        <div className="md:col-span-3 space-y-10">
+
+          {/* SECTION 1 */}
+          <div>
+            <h2 className="text-2xl font-bold text-red-500 mb-4">
+              Daily Routine and Academic Support in Boarding
+            </h2>
+
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+              className="w-full h-52 object-cover rounded mb-4"
+            />
+
+            <p className="text-gray-300">
+              A well-structured daily routine is fundamental to effective boarding
+              education. Learning continues beyond classroom hours through strong
+              after-school academic support that helps students consolidate
+              classroom learning, manage coursework, and develop disciplined
+              study habits.
+            </p>
           </div>
-          <div className="bg-gray-900 p-8 rounded-lg">
-            <h3 className="text-2xl text-red-400 mb-4 font-semibold">
-              Dining Facilities
-            </h3>
-            <ul className="text-gray-300 space-y-2">
-              <li>• Nutritious and balanced meals</li>
-              <li>• Pure drinking water</li>
-              <li>• Hygienic kitchen and dining area</li>
-              <li>• Special dietary arrangements</li>
-              <li>• Regular menu planning</li>
-            </ul>
+
+          {/* SECTION 2 */}
+          <div>
+            <h2 className="text-2xl font-bold text-red-500 mb-4">
+              Physical, Social, and Emotional Wellbeing
+            </h2>
+
+            <img
+              src="https://images.unsplash.com/photo-1509062522246-3755977927d7"
+              className="w-full h-52 object-cover rounded mb-4"
+            />
+
+            <p className="text-gray-300">
+              Counsellors are available to support students with academic stress,
+              social adjustment, and emotional wellbeing. A balanced routine of
+              study, recreation, and rest supports healthy development and
+              long-term success.
+            </p>
           </div>
+
+          {/* SECTION 3 */}
+          <div>
+            <h2 className="text-2xl font-bold text-red-500 mb-4">
+              Learning Beyond the Classroom
+            </h2>
+
+            <img
+              src="https://images.unsplash.com/photo-1517164850305-99a3e65bb47e"
+              className="w-full h-52 object-cover rounded mb-4"
+            />
+
+            <p className="text-gray-300">
+              Students participate in music, dance, drama, sports, and creative
+              activities that encourage teamwork, creativity, and leadership.
+              Weekend enrichment activities such as cookery and arts help
+              students develop practical life skills.
+            </p>
+          </div>
+
+          {/* SECTION 4 */}
+          <div>
+            <h2 className="text-2xl font-bold text-red-500 mb-4">
+              Communication With Parents
+            </h2>
+
+            <img
+              src="https://images.unsplash.com/photo-1557804506-669a67965ba0"
+              className="w-full h-52 object-cover rounded mb-4"
+            />
+
+            <p className="text-gray-300">
+              Continuous communication with parents ensures transparency and
+              reassurance. Parents stay informed about their child’s progress,
+              activities, and wellbeing throughout the boarding journey.
+            </p>
+          </div>
+
+          {/* FAQ */}
+          <div>
+
+            <h2 className="text-2xl font-bold text-red-500 mb-6">
+              Frequently Asked Questions
+            </h2>
+
+            <div className="space-y-3">
+
+              {faqs.map((f, i) => (
+
+                <div key={i} className="border border-gray-700">
+
+                  <button
+                    onClick={() => toggle(i)}
+                    className="w-full flex justify-between px-6 py-4 bg-gray-900 hover:bg-gray-800"
+                  >
+                    {f.q}
+                    <span>{open === i ? "▲" : "▼"}</span>
+                  </button>
+
+                  {open === i && (
+                    <div className="px-6 py-4 text-gray-300 bg-black border-t border-gray-700">
+                      {f.a}
+                    </div>
+                  )}
+
+                </div>
+
+              ))}
+
+            </div>
+
+          </div>
+
         </div>
+
       </section>
 
-      {/* SAFETY & SECURITY */}
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl text-red-500 font-bold text-center mb-12">
-            Safety & Security
-          </h2>
-          <div className="grid md:grid-cols-4 gap-6 text-center">
-            <div className="bg-black p-6 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2 text-red-400">
-                24/7 Security
-              </h3>
-              <p className="text-gray-400">Round the clock security personnel</p>
-            </div>
-            <div className="bg-black p-6 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2 text-red-400">
-                CCTV Surveillance
-              </h3>
-              <p className="text-gray-400">Complete campus monitoring</p>
-            </div>
-            <div className="bg-black p-6 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2 text-red-400">
-                Medical Facility
-              </h3>
-              <p className="text-gray-400">On-campus medical care</p>
-            </div>
-            <div className="bg-black p-6 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2 text-red-400">
-                Warden System
-              </h3>
-              <p className="text-gray-400">Trained wardens for supervision</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CALL TO ACTION */}
-      <section className="max-w-7xl mx-auto px-6 py-20 text-center">
-        <h2 className="text-4xl font-bold text-red-500 mb-6">
-          Enroll Your Child Today
-        </h2>
-        <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-          Give your child the best residential education experience at Gurukul Vidyapeeth,
-          the premier boarding school in Hajipur.
-        </p>
-        <a
-          href="/enquiry-form"
-          className="inline-block bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition duration-300"
-        >
-          Apply Now
-        </a>
-      </section>
     </div>
   );
 };
 
 export default BestBoardingHajipur;
-
