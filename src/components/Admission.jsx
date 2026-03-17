@@ -23,21 +23,21 @@ export default function AdmissionsOpen() {
              hover:bg-yellow-50 transition">
               <Phone className="text-white" />
               <span className="text-white font-semibold tracking-wider">
-                +91 22895913 / 909
+                +91 9931602179
               </span>
             </div>
 
             <div className="flex items-center gap-4 border-2 border-white px-6 py-5 w-80 hover:bg-yellow-50 transition">
               <Phone className="text-white" />
               <span className="text-white font-semibold tracking-wider">
-                +91 9611058843
+                +91 7673076349
               </span>
             </div>
 
             <div className="flex items-center gap-4 border-2 border-white px-6 py-5 w-80 hover:bg-yellow-50 transition">
               <Phone className="text-white" />
               <span className="text-white font-semibold tracking-wider">
-                +91 9886268567
+                +91 8002043766
               </span>
             </div>
 

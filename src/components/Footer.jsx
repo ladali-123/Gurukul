@@ -21,8 +21,8 @@ export default function Footer() {
           <ul className="space-y-3 text-white">
             <li className="hover:text-white cursor-pointer">Home</li>
             <li className="hover:text-white cursor-pointer">About Us</li>
+            <li className="hover:text-white cursor-pointer">Admissions</li>
             <li className="hover:text-white cursor-pointer">Curriculum</li>
-            <li className="hover:text-white cursor-pointer">Admission</li>
             <li className="hover:text-white cursor-pointer">Careers</li>
           </ul>
         </div>
@@ -31,10 +31,9 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold text-lg mb-6">Mail Us</h3>
           <ul className="space-y-3 text-white text-sm">
-            <li>admissions@yourschool.com</li>
-            <li>feedback@yourschool.com</li>
-            <li>recruitment@yourschool.com</li>
-            <li>principal@yourschool.com</li>
+            <li>gurukulvidyapeethhaj@yahoo.in</li>
+            <li>gurukulvidyapeeth330280@gmail.com</li>
+           
           </ul>
         </div>
 

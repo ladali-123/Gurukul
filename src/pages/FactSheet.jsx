@@ -23,10 +23,10 @@ const aboutDropdownItems = [
 ];
 
 const stats = [
-  { icon: <FaFlag className="text-red-500 text-2xl" />, label: "Founded", value: "July 14th, 2003" },
-  { icon: <FaBuilding className="text-red-500 text-2xl" />, label: "Campus Size", value: "40+ acres" },
-  { icon: <FaUserGraduate className="text-red-500 text-2xl" />, label: "Student Strength", value: "1100+" },
-  { icon: <FaChalkboardTeacher className="text-red-500 text-2xl" />, label: "Faculty Strength", value: "160+" },
+  { icon: <FaFlag className="text-red-500 text-2xl" />, label: "Founded", value: "26Th Jan,2002" },
+  { icon: <FaBuilding className="text-red-500 text-2xl" />, label: "Campus Size", value: "4+ Acre" },
+  { icon: <FaUserGraduate className="text-red-500 text-2xl" />, label: "Student Strength", value: "4000+" },
+  { icon: <FaChalkboardTeacher className="text-red-500 text-2xl" />, label: "Faculty Strength", value: "30+" },
   { icon: <FaUsers className="text-red-500 text-2xl" />, label: "Class Size", value: "25 students" },
 ];
 

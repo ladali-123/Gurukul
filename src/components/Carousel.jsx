@@ -2,21 +2,21 @@ import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import pic2 from "../assets/pic2.jpg";
 import pic3 from "../assets/pic3.jpg";
+import pic1 from "../assets/pic1.jpg";
 
 const Carousel = () => {
   const [current, setCurrent] = useState(0);
 
   const slides = [
     {
-      image:
-        "https://i.pinimg.com/1200x/29/28/2c/29282c24b4508f538eb2dc301f8970eb.jpg",
+      image: pic2,
       title: "Gurukul Vidyapeeth, Hajipur",
       subtitle:
         "Excellence in Education with Modern Innovation & Traditional Values",
       extra: "Admissions Open 2026-27",
     },
     {
-      image: pic2,
+      image: pic1,
       title: "World-Class Infrastructure",
       subtitle:
         "Smart Classrooms, Science Labs & Holistic Development Facilities",
@@ -47,7 +47,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden carousel ">
+    <div className="relative w-full h-screen overflow-hidden carousel">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -67,21 +67,24 @@ const Carousel = () => {
             className={`absolute inset-0 flex items-center justify-center text-center px-6
               ${
                 index === 0
-                  ? "bg-red-900/70 text-white"   // 🔴 Only first slide red
-                  : "bg-black/50 text-white"     // ⚫ Others dark overlay
+                  ? "bg-black/40 text-white"   // ✅ FIXED first slide
+                  : "bg-black/50 text-white"
               }`}
           >
             <div className="max-w-4xl">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              {/* Heading */}
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
                 {slide.title}
               </h1>
 
-              <p className="text-lg md:text-2xl mb-6">
+              {/* Subtitle */}
+              <p className="text-lg md:text-2xl mb-6 drop-shadow-md">
                 {slide.subtitle}
               </p>
 
+              {/* Extra Badge */}
               {slide.extra && (
-                <div className="inline-block border border-white px-6 py-2 rounded-full text-sm tracking-wider">
+                <div className="inline-block px-6 py-2 rounded-full text-sm tracking-wider bg-red-600 text-white shadow-lg">
                   {slide.extra}
                 </div>
               )}
