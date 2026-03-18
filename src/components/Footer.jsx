@@ -1,4 +1,5 @@
 import logo from "../assets/logo.png"; // path apne structure ke hisaab se adjust karein
+import { Link } from "react-router-dom";
 import { Linkedin, Youtube, Facebook, Instagram } from "lucide-react";
 
 export default function Footer() {
@@ -19,11 +20,11 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold text-lg mb-6">Main Links</h3>
           <ul className="space-y-3 text-white">
-            <li className="hover:text-white cursor-pointer">Home</li>
-            <li className="hover:text-white cursor-pointer">About Us</li>
-            <li className="hover:text-white cursor-pointer">Admissions</li>
-            <li className="hover:text-white cursor-pointer">Curriculum</li>
-            <li className="hover:text-white cursor-pointer">Careers</li>
+            <li><Link to="/" className="hover:text-white block py-1">Home</Link></li>
+            <li><Link to="/about" className="hover:text-white block py-1">About Us</Link></li>
+            <li><Link to="/admissions" className="hover:text-white block py-1">Admissions</Link></li>
+            <li><Link to="/curriculum" className="hover:text-white block py-1">Curriculum</Link></li>
+            <li><Link to="/careers" className="hover:text-white block py-1">Careers</Link></li>
           </ul>
         </div>
 

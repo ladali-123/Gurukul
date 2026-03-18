@@ -1,4 +1,5 @@
 import React from "react";
+import pic2 from "../assets/pic2.jpg";
 
 const Contact = () => {
   return (
@@ -6,25 +7,24 @@ const Contact = () => {
 
       {/* ======= HERO SECTION ======= */}
      {/* ======= HERO SECTION ======= */}
-<div className="relative w-full h-[350px] overflow-hidden">
-
+<div className="w-full h-[250px] md:h-[400px] relative">
   <img
-    src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=2070&auto=format&fit=crop"
-    alt="school"
+    src={pic2}
+    alt="contact"
     className="w-full h-full object-cover"
+    style={{ objectPosition: "center 50%" }}
   />
 
-  {/* dark overlay */}
-  <div className="absolute inset-0 bg-black/60"></div>
-
-  {/* title */}
- <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-500/60 backdrop-blur-sm px-6 sm:px-10 py-4 rounded-lg">
-  <h1 className="text-3xl sm:text-4xl font-bold text-white text-center">
-    Contact Us
-  </h1>
+  <div className="absolute inset-0 bg-black/30 flex items-center justify-center px-4">
+    <div className="bg-red-500/40 px-4 py-3 md:px-12 md:py-6 rounded-xl md:rounded-2xl text-center max-w-[90%] md:max-w-fit">
+      <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white">
+        Contact Us
+      </h1>
+    </div>
+  </div>
 </div>
 
-</div>
+
 
       {/* ======= FORM SECTION ======= */}
       <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">

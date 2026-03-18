@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import aboutImg from "../assets/about.jpg"; // Top hero image
+import pic23 from "../assets/pic23.jpg";// Top hero image
 import { Link } from "react-router-dom";
 
 const beyondAcademicsDropdownItems = [
@@ -16,23 +16,25 @@ const GurukulCommunitySchool = () => {
   return (
     <>
       <Navbar />
-      <div className="pt-[90px] bg-black text-white min-h-screen">
+     <div className="pt-[90px] bg-black text-white min-h-screen">
 
-        {/* HERO IMAGE */}
-        <div className="relative w-full h-[450px]">
-          <img
-            src={aboutImg}
-            alt="Gurukul Community School"
-            className="w-full h-full object-cover"
-          />
-         <div className="absolute top-1/2 left-1/2 md:left-16 -translate-x-1/2 md:translate-x-0 -translate-y-1/2">
-  <div className="bg-red-700/80 px-4 md:px-6 py-3 md:py-4 rounded">
-    <h1 className="text-3xl md:text-5xl font-bold text-white text-center">
-      Gurukul Community School
-    </h1>
+  {/* HERO IMAGE */}
+  <div className="w-full h-[250px] md:h-[400px] relative">
+    <img
+      src={pic23}
+      alt="Gurukul Community School"
+      className="w-full h-full object-cover"
+      style={{ objectPosition: "center 35%" }}
+    />
+
+    <div className="absolute inset-0 bg-black/30 flex items-center justify-center px-4">
+      <div className="bg-red-500/40 px-4 py-3 md:px-12 md:py-6 rounded-xl md:rounded-2xl text-center max-w-[90%] md:max-w-fit">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white">
+          Gurukul Community School
+        </h1>
+      </div>
+    </div>
   </div>
-</div>
-        </div>
 
         {/* MAIN CONTENT */}
         <section className="py-16">

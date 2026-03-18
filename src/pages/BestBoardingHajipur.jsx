@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import boardingImg from "../assets/boarding.jpg";
+import pic2 from "../assets/pic2.jpg";
 
 const boardingDropdownItems = [
   { name: "Best Boarding School in Hajipur", path: "/boarding/best-boarding-hajipur" },
@@ -35,21 +35,22 @@ const BestBoardingHajipur = () => {
     <div className="bg-black text-white pt-[90px]">
 
       {/* HERO */}
-      <section className="relative h-[320px] w-full">
-        <img
-          src={boardingImg}
-          alt="Boarding"
-          className="w-full h-full object-cover"
-        />
+     <section className="w-full h-[250px] md:h-[400px] relative">
+  <img
+    src={pic2}
+    alt="Boarding"
+    className="w-full h-full object-cover"
+    style={{ objectPosition: "center 50%" }}
+  />
 
-        <div className="absolute inset-0 flex items-center justify-center md:justify-start">
-          <div className="bg-red-600/50 px-6 md:px-10 py-4 md:py-6 md:ml-10 rounded">
-            <h1 className="text-3xl md:text-5xl font-bold text-white text-center md:text-left">
-              Best Boarding School in Hajipur
-            </h1>
-          </div>
-        </div>
-      </section>
+  <div className="absolute inset-0 bg-black/30 flex items-center justify-center px-4">
+    <div className="bg-red-500/40 px-4 py-3 md:px-12 md:py-6 rounded-xl md:rounded-2xl text-center max-w-[90%] md:max-w-fit">
+      <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white">
+        Best Boarding School
+      </h1>
+    </div>
+  </div>
+</section>
 
       {/* BREADCRUMB */}
       <div className="max-w-7xl mx-auto px-6 py-4 text-gray-400">
