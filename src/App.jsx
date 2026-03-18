@@ -36,6 +36,7 @@ import Testimonials from './pages/Testimonials'
 import BestBoardingHajipur from './pages/BestBoardingHajipur'
 import BoardingSchedule from './pages/BoardingSchedule'
 import BoardingGallery from './pages/BoardingGallery'
+import Gallery from './pages/Gallery'
 
 // Beyond Academics dropdown pages
 import WholeEducation from './pages/WholeEducation'
@@ -86,6 +87,7 @@ function App() {
         <Route path="/boarding/best-boarding-hajipur" element={<BestBoardingHajipur />} />
         <Route path="/boarding/schedule" element={<BoardingSchedule />} />
         <Route path="/boarding/gallery" element={<BoardingGallery />} />
+        <Route path="/gallery" element={<Gallery />} />
      
         {/* Beyond Academics Dropdown Pages */}
         <Route path="/beyond-academics/whole-education" element={<WholeEducation />} />

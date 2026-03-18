@@ -15,29 +15,30 @@ const About = () => {
 
           <div className="text-gray-300 text-lg leading-relaxed space-y-4 text-justify">
             <p>
-              Established with a vision to transform education,
-              <span className="text-white font-semibold"> Gurukul </span>
-              has proudly earned its reputation as the
-              <span className="text-white font-semibold"> best school in Hajipur</span>.
-              Our institution is built on a strong foundation of academic excellence,
-              moral values, discipline, and holistic development. We believe that true
-              education shapes not only brilliant minds but also strong character,
-              integrity, resilience, empathy, leadership, responsibility, confidence,
-              vision, lifelong wisdom, perseverance, adaptability, and compassion.
+              Established on
+              <span className="text-white font-semibold"> 26th January 2002</span>,
+              <span className="text-white font-semibold"> Gurukul Vidyapeeth </span>
+              began its journey with 135 students and has today grown into one of the
+              <span className="text-white font-semibold"> leading CBSE-affiliated schools</span>
+              , with over 4000 students. Spread across a serene
+              <span className="text-white font-semibold"> 5-acre green campus</span>,
+              the school provides a peaceful and enriching environment surrounded by lush
+              orchards and open spaces, creating a perfect atmosphere for learning and growth.
+              Our institution stands on a strong foundation of academic excellence, discipline,
+              values, and holistic development, where students are nurtured to become confident,
+              responsible, and future-ready individuals.
             </p>
 
             <p>
-              At Gurukul, learning goes beyond textbooks and examinations. We foster
-              an environment where curiosity is encouraged, creativity is nurtured,
-              and leadership qualities are developed from an early age. Our curriculum
-              is thoughtfully designed to combine academic rigor with co-curricular
-              activities, ensuring that every child receives a balanced and enriching
-              educational experience. Our dedicated and experienced faculty members
-              are committed to guiding students toward academic success while also
-              mentoring them in personal growth. With modern classrooms, advanced
-              learning tools, and a supportive, innovative, dynamic, and inclusive
-              atmosphere, we create inspiring opportunities for students to explore
-              their talents and discover their true global, future-ready potential.
+              At Gurukul Vidyapeeth, education goes beyond textbooks, focusing equally on
+              innovation and overall growth. The campus is equipped with modern facilities
+              such as AI & Robotics Lab, smart classrooms, library and resource center,
+              computer, science and mathematics labs, along with art, music, and activity rooms.
+              We actively promote cultural activities, games and sports, excursions, and
+              leadership development opportunities. With a safe and secure environment,
+              dedicated faculty, and reliable transport facilities, we ensure that every
+              student experiences a balanced, inspiring, and progressive journey of learning
+              and personal development, preparing them to face future challenges with confidence and strong leadership qualities in a competitive global modern world.
             </p>
           </div>
         </div>
@@ -54,7 +55,17 @@ const About = () => {
             </h2>
 
             <p className="text-gray-300 text-lg leading-relaxed text-justify">
-             Gurukul Vidyapeeth Hajipur is committed to providing quality education, experienced faculty, modern infrastructure, and a nurturing environment where every child feels valued and inspired to learn. We focus on academic excellence along with personality development, leadership skills, and moral values that help students succeed not only in examinations but also in real life challenges. Our balanced approach ensures students grow intellectually, socially, and emotionally, preparing them to become confident, responsible, and compassionate individuals. Through innovative teaching methods, continuous assessment, and active participation in co-curricular activities, we encourage students to think critically, communicate effectively, and develop a strong sense of discipline and integrity. At Gurukul, our goal is to empower young minds with knowledge, skills, and values that shape a bright and successful future.
+              Gurukul Vidyapeeth Hajipur stands out for its commitment to modern, result-oriented
+              education combined with strong academic guidance and student care. The school integrates
+              smart classes to make learning interactive and effective while organizing regular trips
+              and excursions to places of historical and scientific importance. Regular medical check-ups
+              ensure students’ well-being. Special preparation for IIT, Medical, and other competitive
+              examinations begins from class VII under expert guidance. Upgraded to Senior Secondary in 2013,
+              the school continues to excel in preparing students for engineering and medical careers. With
+              its extended branch at Anjanpeer Chauraha and additional coaching support without extra fees,
+              along with a safe hostel facility, Gurukul provides a disciplined, supportive, and growth-oriented
+              environment for every student, ensuring their overall academic excellence and holistic personality
+              development for future success in a highly competitive world today globally successfully.
             </p>
           </div>
 
@@ -79,7 +90,7 @@ const About = () => {
             <img
               src={sir}
               alt="MD & CEO"
-              className="rounded-xl shadow-lg w-full max-w-xl lg:max-w-xl"
+              className="rounded-xl shadow-lg w-full max-w-xl h-64 sm:h-80 md:h-80 lg:h-[500px] object-cover"
             />
           </div>
 
@@ -101,7 +112,7 @@ const About = () => {
               positively to society.
             </p>
 
-            
+
             <div className="mt-6">
               <p className="text-gray-400 italic">Warm Regards,</p>
               <p className="text-2xl font-semibold mt-2">Arjun Ray</p>

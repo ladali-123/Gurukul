@@ -67,7 +67,7 @@ const Carousel = () => {
             className={`absolute inset-0 flex items-center justify-center text-center px-6
               ${
                 index === 0
-                  ? "bg-black/40 text-white"   // ✅ FIXED first slide
+                  ? "bg-black/50 text-white"   // ✅ FIXED first slide
                   : "bg-black/50 text-white"
               }`}
           >

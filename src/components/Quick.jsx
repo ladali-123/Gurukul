@@ -4,24 +4,24 @@ import { Flag, Users, School, Globe, GraduationCap } from "lucide-react";
 const stats = [
     {
         icon: <Flag size={40} />,
-        value: 2003,
-        label: "FOUNDED",
-        subText: "JULY 14TH",
+        value: 2002,
+        
+        subText: "26TH JAN",
         isDate: true,
     },
     {
         icon: <Users size={40} />,
-        value: 1100,
+        value: 4000,
         label: "STUDENT STRENGTH",
     },
     {
         icon: <School size={40} />,
-        value: 25,
+        value: 30,
         label: "STUDENTS CLASS SIZE",
     },
     {
         icon: <Globe size={40} />,
-        value: 40,
+        value:4,
         label: "ACRES",
     },
     {

@@ -15,6 +15,7 @@ const Navbar = () => {
     { name: "Curriculum", hasDropdown: true },
     { name: "Boarding", hasDropdown: true },
     { name: "Beyond Academics", hasDropdown: true },
+    { name: "Gallery", path: "/gallery" },
     { name: "Careers", path: "/careers" },
     { name: "Contact Us", path: "/contact" },
   ];
@@ -173,3 +174,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
