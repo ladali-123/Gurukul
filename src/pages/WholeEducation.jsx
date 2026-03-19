@@ -4,7 +4,7 @@ import pic23 from "../assets/pic23.jpg";
 import { Link } from "react-router-dom";
 
 // Use your IB MYP/PYP/DP style diagram as middle image
-import ibDiagram2 from "../assets/ib_diagram2.jpg";  // assuming diagram2 is mypImg
+  // assuming diagram2 is mypImg
 
 const beyondAcademicsDropdownItems = [
   { name: "Whole Education", path: "/beyond-academics/whole-education" },
@@ -87,7 +87,7 @@ const BeyondAcademicsWholeEducation = () => {
               {/* Presentation Image */}
               <div>
                 <img
-                  src={ibDiagram2}
+                  src={pic23}
                   alt="Whole Education Diagram"
                   className="w-full h-auto rounded-lg object-cover"
                 />

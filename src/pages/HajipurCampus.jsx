@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import pic2 from "../assets/pic2.jpg";
-import heroImg from "../assets/admission.jpg";
+
 import { Link } from "react-router-dom";
 
 const aboutDropdownItems = [
@@ -91,7 +91,7 @@ const HajipurCampus = () => {
               {/* BOTTOM: hero image */}
               <div className="w-full">
                 <img
-                  src={heroImg}
+                  src={pic2}
                   alt="school"
                   className="w-full h-[300px] md:h-[450px] object-cover rounded-2xl"
                 />

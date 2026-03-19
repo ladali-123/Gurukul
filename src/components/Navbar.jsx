@@ -7,6 +7,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [mobileDropdown, setMobileDropdown] = useState({});
 
+  const hiddenItems = ["Leadership"];
+
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Leadership", path: "/leadership" },
@@ -14,7 +16,7 @@ const Navbar = () => {
     { name: "Admissions", hasDropdown: true },
     { name: "Curriculum", hasDropdown: true },
     { name: "Boarding", hasDropdown: true },
-    { name: "Beyond Academics", hasDropdown: true },
+{ name: "Beyond Academics", path: "/beyond-academics/whole-education" },
     { name: "Gallery", path: "/gallery" },
     { name: "Careers", path: "/careers" },
     { name: "Contact Us", path: "/contact" },
@@ -38,8 +40,6 @@ const Navbar = () => {
   const curriculumDropdownItems = [
     { name: "IBS School Hajipur", path: "/curriculum/ibs-hajipur" },
     { name: "School Hajipur", path: "/curriculum/school-hajipur" },
-    { name: "SEN & ESL", path: "/curriculum/sen-esl" },
-    { name: "Age Criteria", path: "/age-criteria" },
   ];
 
   const boardingDropdownItems = [
@@ -48,14 +48,7 @@ const Navbar = () => {
     { name: "Boarding Gallery", path: "/boarding/gallery" },
   ];
 
-  const beyondAcademicsDropdownItems = [
-    { name: "Whole Education", path: "/beyond-academics/whole-education" },
-    { name: "Collaborative Learning Model", path: "/beyond-academics/collaborative-learning" },
-    { name: "Startup You", path: "/beyond-academics/startup-you" },
-    { name: "Gurukul School of Leadership", path: "/beyond-academics/leadership" },
-    { name: "Hajipur Training & Research Institute", path: "/beyond-academics/training-research" },
-    { name: "Gurukul Community School", path: "/beyond-academics/community-school" },
-  ];
+
 
   const getDropdownItems = (name) => {
     switch (name) {
@@ -67,8 +60,7 @@ const Navbar = () => {
         return curriculumDropdownItems;
       case "Boarding":
         return boardingDropdownItems;
-      case "Beyond Academics":
-        return beyondAcademicsDropdownItems;
+
       default:
         return [];
     }
@@ -95,7 +87,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden lg:flex items-center space-x-8 text-white text-sm font-medium">
-          {navItems.map((item, index) => (
+          {navItems.filter(item => !hiddenItems.includes(item.name)).map((item, index) => (
             <li key={index} className="relative group z-50">
               <Link
                 to={item.hasDropdown ? getDropdownItems(item.name)[0].path : item.path}
@@ -133,7 +125,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div className={`lg:hidden bg-black overflow-hidden transition-all duration-500 ${isOpen ? "max-h-[800px] py-4" : "max-h-0"}`}>
         <ul className="flex flex-col items-center space-y-4 text-white text-sm font-medium">
-          {navItems.map((item, index) => (
+          {navItems.filter(item => !hiddenItems.includes(item.name)).map((item, index) => (
             <li key={index} className="w-full text-center cursor-pointer hover:text-red-600 transition duration-300">
               <div
                 className="flex items-center justify-center gap-1"
