@@ -38,59 +38,17 @@ const highlights = [
 ];
 
 const achievements = [
-  {
-    icon: <FaMedal className="text-red-500 text-xl mt-1 shrink-0" />,
-    text: (
-      <>
-        Lt. General Arjun Ray <strong>has been awarded with Lifetime Achievement Award (2024-25)</strong> by Education World for his preeminent contribution in the field of education. He is an exemplary learner, teacher and leader with a vision and strategies to bring innovation in education.
-      </>
-    ),
-  },
-  {
-    icon: <FaStar className="text-red-500 text-xl mt-1 shrink-0" />,
-    text: (
-      <>
-        Dr. Sarojini Rao has been selected as "Leaders-The Pillars in Education" in 2018 by Education World for her exemplary display of sincerity, dedication & hard work in the field of education and <strong>has been conferred the Cfore Lifetime Achievement Award 2025.</strong>
-      </>
-    ),
-  },
+ 
+  
+ 
+ 
+ 
   {
     icon: <FaTrophy className="text-red-500 text-xl mt-1 shrink-0" />,
     text: (
       <>
-        Gurukul International School Hajipur has been ranked <strong>No. 1</strong> in International schools in India for 14 consecutive years (Cfore Rankings: In 2012 – under the <strong>'Most admired International Schools'</strong> category; In 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014 and 2013 under the 'Best Day-cum-boarding International Schools' category).
-      </>
-    ),
-  },
-  {
-    icon: <FaMedal className="text-red-500 text-xl mt-1 shrink-0" />,
-    text: (
-      <>
-        Gurukul International School Hajipur has been ranked <strong>No. 1</strong> India's Best School, by <strong>Education Today</strong> in 2017 under the category of International Jury's Choice Award.
-      </>
-    ),
-  },
-  {
-    icon: <FaStar className="text-red-500 text-xl mt-1 shrink-0" />,
-    text: (
-      <>
-        Gurukul International School Hajipur has been awarded the <strong>NDTV-Educomp South Zone Education</strong> awards 2016 in Academics, Pedagogy, Faculty Training, Inclusive Education, Instructional Leadership and Teacher Category for English.
-      </>
-    ),
-  },
-  {
-    icon: <FaDollarSign className="text-red-500 text-xl mt-1 shrink-0" />,
-    text: (
-      <>
-        In 2023-24 the highest scholarship amount received by a student was <strong>USD 393,000.</strong> The overall scholarship amount combined was over <strong>7.8 Million (7,800,000) USD.</strong>
-      </>
-    ),
-  },
-  {
-    icon: <FaTrophy className="text-red-500 text-xl mt-1 shrink-0" />,
-    text: (
-      <>
-        Gurukul International School has been awarded the <strong>White Swan Education Award</strong> for India's most influential brand in education 2015-16.
+       Gurukul Vidyapeeth (GKVP) is a CBSE-affiliated school focused on holistic education, nurturing intellect, character,
+        and responsible individuals under the vision “Sa Vidya Ya Vimuktaye.”
       </>
     ),
   },

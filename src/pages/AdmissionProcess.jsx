@@ -7,7 +7,6 @@ const admissionsDropdownItems = [
   { name: "Admission Process", path: "/admission-process" },
   { name: "Enquiry Form", path: "/enquiry-form" },
   { name: "FAQs", path: "/faqs" },
-  { name: "Testimonials", path: "/testimonials" },
 ];
 
 const AdmissionProcess = () => {
@@ -121,21 +120,21 @@ const AdmissionProcess = () => {
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-white rounded-full mr-4"></span>
                     <span>
-                      <strong>Email:</strong> admissions@indusschool.com
+                      <strong>Email:</strong> gurukulvidyapeethhaj@yahoo.in
                     </span>
                   </li>
 
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-white rounded-full mr-4"></span>
                     <span>
-                      <strong>Telephone:</strong> +91-80-22895913
+                      <strong>Telephone:</strong> +91-9931602179
                     </span>
                   </li>
 
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-white rounded-full mr-4"></span>
                     <span>
-                      <strong>Telephone:</strong> +91-9886268567
+                      <strong>Telephone:</strong> +91-7673076349
                     </span>
                   </li>
 

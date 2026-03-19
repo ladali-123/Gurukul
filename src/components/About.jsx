@@ -105,17 +105,18 @@ const About = () => {
             </h3>
 
             <p className="text-gray-300 text-lg leading-relaxed text-justify mb-6">
-              At Gurukul Vidyapeeth Hajipur, our vision is to provide an education
-              system that empowers students with knowledge, confidence, and strong
-              moral values. We believe that education is not just about academic
-              achievement, but about shaping responsible citizens who contribute
-              positively to society.
+              At Gurukul Vidyapeeth (GKVP), we are committed to providing quality education in a
+              nurturing and disciplined environment. As a CBSE-affiliated institution, we focus on
+              the holistic development of every child—intellectual, moral, physical, and emotional.
+              Guided by Neo-Humanistic values, we aim to shape compassionate, responsible, and confident
+              individuals who are prepared to contribute meaningfully to society. We strive to create
+              a learning atmosphere that inspires curiosity, creativity, and lifelong learning.
             </p>
 
 
             <div className="mt-6">
               <p className="text-gray-400 italic">Warm Regards,</p>
-              <p className="text-2xl font-semibold mt-2">Arjun Ray</p>
+              {/* <p className="text-2xl font-semibold mt-2">Arjun Ray</p>*/}
               <p className="text-gray-400 mt-1">
                 Founder MD & CEO <br /> Gurukul School Hajipur
               </p>

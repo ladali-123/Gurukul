@@ -37,26 +37,26 @@ const Contact = () => {
       },
       "ALS-RHe7xrg_x2qz7"
     )
-    .then(() => {
-      setStatus("success");
-      setLoading(false);
+      .then(() => {
+        setStatus("success");
+        setLoading(false);
 
-      setFormData({
-        first_name: "",
-        last_name: "",
-        dob: "",
-        academic_year: "",
-        email: "",
-        mobile: "",
-        message: ""
+        setFormData({
+          first_name: "",
+          last_name: "",
+          dob: "",
+          academic_year: "",
+          email: "",
+          mobile: "",
+          message: ""
+        });
+
+        setTimeout(() => setStatus(""), 3000);
+      })
+      .catch(() => {
+        setStatus("error");
+        setLoading(false);
       });
-
-      setTimeout(() => setStatus(""), 3000);
-    })
-    .catch(() => {
-      setStatus("error");
-      setLoading(false);
-    });
   };
 
   return (
@@ -131,11 +131,10 @@ const Contact = () => {
             <button
               type="submit"
               disabled={loading}
-              className={`mt-6 px-6 py-3 rounded font-semibold ${
-                loading
+              className={`mt-6 px-6 py-3 rounded font-semibold ${loading
                   ? "bg-gray-500 cursor-not-allowed"
                   : "bg-red-600 hover:bg-red-700"
-              }`}
+                }`}
             >
               {loading ? "Sending..." : "Submit"}
             </button>
@@ -150,9 +149,9 @@ const Contact = () => {
           <p className="mb-3">gurukulvidyapeeth330280@gmail.com</p>
 
           <h2 className="text-2xl font-bold mb-4 text-red-500">Phone Details</h2>
-          <p>Reception: +91 9931602179</p>
-          <p>Administration: +91 7673076349</p>
-          <p>HR: +91 8002043766</p>
+          <p> +91 9931602179</p>
+          <p> +91 7673076349</p>
+          <p>+91 8002043766</p>
         </div>
 
       </div>

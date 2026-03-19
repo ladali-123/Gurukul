@@ -1,4 +1,4 @@
-import logo from "../assets/logo.png"; // path apne structure ke hisaab se adjust karein
+import logo1 from "../assets/logo1.png"; // path apne structure ke hisaab se adjust karein
 import { Link } from "react-router-dom";
 import { Linkedin, Youtube, Facebook, Instagram } from "lucide-react";
 
@@ -10,7 +10,7 @@ export default function Footer() {
 
         {/* Logo Section */}
         <div>
-          <img src={logo} alt="School Logo" className="w-26 mb-6 rounded-full" />
+          <img src={logo1} alt="School Logo" className="w-28 mb-6 rounded-full" />
           <p className="text-white text-sm">
             ISO CERTIFIED ORGANISATION
           </p>
@@ -34,7 +34,12 @@ export default function Footer() {
           <ul className="space-y-3 text-white text-sm">
             <li>gurukulvidyapeethhaj@yahoo.in</li>
             <li>gurukulvidyapeeth330280@gmail.com</li>
-           
+
+            <li>
+              <span className="font-semibold">Postal Address:</span><br />
+              Rampur Nausahan, Nawada Chowk, Near Jadhua,<br />
+              Hajipur (Vaishali), PIN - 844102
+            </li>
           </ul>
         </div>
 
@@ -60,7 +65,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10 py-6 text-center text-white text-sm">
-© 2024 Gurukul Vidyapeeth School Hajipur. All Rights Reserved.
+        © 2024 Gurukul Vidyapeeth School Hajipur. All Rights Reserved.
       </div>
 
     </footer>

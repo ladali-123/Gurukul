@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [mobileDropdown, setMobileDropdown] = useState({});
 
-  const hiddenItems = ["Leadership"];
+const hiddenItems = ["Leadership", "Curriculum", "Boarding", "Beyond Academics"];
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -22,19 +22,20 @@ const Navbar = () => {
     { name: "Contact Us", path: "/contact" },
   ];
 
-  const aboutDropdownItems = [
+const aboutDropdownItems = [
     { name: "The School", path: "/mission" },
     { name: "Mission Vision", path: "/vision" },
     { name: "Fact Sheet", path: "/fact-sheet" },
     { name: "Hajipur Campus", path: "/hajipur-campus" },
-    { name: "Parent Advisory Committee", path: "/parent-advisory" },
   ];
+
+  const filteredAboutDropdownItems = aboutDropdownItems.filter(item => item.name !== "Parent Advisory Committee");
 
   const admissionsDropdownItems = [
     { name: "Admission Process", path: "/admission-process" },
     { name: "Enquiry Form", path: "/enquiry-form" },
     { name: "FAQs", path: "/faqs" },
-    { name: "Testimonials", path: "/testimonials" },
+    
   ];
 
   const curriculumDropdownItems = [
@@ -81,7 +82,7 @@ const Navbar = () => {
           <img src={logo} alt="Gurukul Logo" className="h-18 w-auto" />
           <div>
             <h1 className="text-white text-2xl tracking-widest font-semibold">GURUKUL</h1>
-            <p className="text-white text-xl tracking-wider">Vidyapeeth</p>
+            <p className="text-white text-xl tracking-wider">VIDYAPEETH</p>
           </div>
         </div>
 
@@ -98,7 +99,7 @@ const Navbar = () => {
 
               {item.hasDropdown && (
                 <div className="absolute left-0 top-full mt-2 w-56 bg-gray-900 border border-red-600/30 rounded-lg shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  {getDropdownItems(item.name).map((d, i) => (
+              {(item.name === "About Us" ? filteredAboutDropdownItems : getDropdownItems(item.name)).map((d, i) => (
                     <Link
                       key={i}
                       to={d.path}
@@ -144,7 +145,7 @@ const Navbar = () => {
               {/* Mobile Dropdowns */}
               {item.hasDropdown && mobileDropdown[item.name] && (
                 <ul className="mt-2 space-y-2 pl-4">
-                  {getDropdownItems(item.name).map((d, i) => (
+{(item.name === "About Us" ? filteredAboutDropdownItems : getDropdownItems(item.name)).map((d, i) => (
                     <li key={i}>
                       <Link
                         to={d.path}

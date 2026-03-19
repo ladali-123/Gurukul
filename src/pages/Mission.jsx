@@ -7,8 +7,7 @@ const aboutDropdownItems = [
   { name: "The School", path: "/mission" },
   { name: "Mission Vision", path: "/vision" },
   { name: "Fact Sheet", path: "/fact-sheet" },
-  { name: "Hajipur Campus", path: "/hajipur-campus" },
-  { name: "Parent Advisory Committee", path: "/parent-advisory" },
+  { name: "Hajipur Campus", path: "/hajipur-campus" }
 ];
 
 const Mission = () => {

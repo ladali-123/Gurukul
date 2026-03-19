@@ -69,8 +69,7 @@ const Vision = () => {
               </h2>
 
               <p className="border-l-4 border-red-600 pl-6 text-gray-300 text-lg mb-10">
-                “To create life entrepreneurs through holistic education and
-                lifelong learning.”
+                “To nurture independent individuals through holistic education and lifelong learning.”
               </p>
 
               {/* VISION */}
@@ -79,9 +78,8 @@ const Vision = () => {
               </h2>
 
               <p className="border-l-4 border-red-600 pl-6 text-gray-300 text-lg">
-                "To create global citizens and leaders of tomorrow through
-                traditional values of Love, Empathy, Discipline and Respect –
-                21st century citizens who think globally and act locally."
+                "To develop responsible global citizens and future leaders through values of love, empathy, 
+                discipline, and respect—individuals who think globally and act responsibly in their communities."
               </p>
 
             </div>
