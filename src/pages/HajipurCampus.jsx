@@ -9,8 +9,9 @@ const aboutDropdownItems = [
   { name: "Mission Vision", path: "/vision" },
   { name: "Fact Sheet", path: "/fact-sheet" },
   { name: "Hajipur Campus", path: "/hajipur-campus" },
-  { name: "Parent Advisory Committee", path: "/parent-advisory" },
 ];
+
+const filteredAboutDropdownItems = aboutDropdownItems.filter(item => item.name !== "Parent Advisory Committee");
 
 const HajipurCampus = () => {
   return (
@@ -46,7 +47,7 @@ const HajipurCampus = () => {
             {/* LEFT SIDEBAR */}
             <div className="md:col-span-1">
               <div className="border border-gray-800 rounded-lg overflow-hidden mt-4">
-                {aboutDropdownItems.map((item, index) => (
+                {filteredAboutDropdownItems.map((item, index) => (
                   <Link
                     key={index}
                     to={item.path}

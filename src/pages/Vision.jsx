@@ -8,8 +8,9 @@ const aboutDropdownItems = [
   { name: "Mission Vision", path: "/vision" },
   { name: "Fact Sheet", path: "/fact-sheet" },
   { name: "Hajipur Campus", path: "/hajipur-campus" },
-  { name: "Parent Advisory Committee", path: "/parent-advisory" },
 ];
+
+const filteredAboutDropdownItems = aboutDropdownItems.filter(item => item.name !== "Parent Advisory Committee");
 
 const Vision = () => {
   return (
@@ -45,11 +46,11 @@ const Vision = () => {
             {/* LEFT SIDEBAR */}
             <div className="md:col-span-1">
               <div className="border border-gray-800 rounded-lg overflow-hidden">
-                {aboutDropdownItems.map((item, index) => (
+                {filteredAboutDropdownItems.map((item, index) => (
                   <Link
                     key={index}
                     to={item.path}
-                    className={`block px-5 py-4 border-b border-gray-800 transition ${item.name === " Mission"
+                    className={`block px-5 py-4 border-b border-gray-800 transition ${item.name === "Mission Vision"
                         ? "bg-red-600 text-white font-semibold"
                         : "hover:bg-red-600"
                       }`}

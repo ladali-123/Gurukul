@@ -6,7 +6,7 @@ const admissionsDropdownItems = [
   { name: "Admission Process", path: "/admission-process" },
   { name: "Enquiry Form", path: "/enquiry-form" },
   { name: "Frequently Asked Questions", path: "/faqs" },
-  { name: "Testimonials", path: "/testimonials" },
+  
 ];
 
 const faqs = [
