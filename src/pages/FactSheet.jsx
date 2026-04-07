@@ -40,10 +40,6 @@ const highlights = [
 
 const achievements = [
  
-  
- 
- 
- 
   {
     icon: <FaTrophy className="text-red-500 text-xl mt-1 shrink-0" />,
     text: (

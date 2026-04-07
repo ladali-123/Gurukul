@@ -21,22 +21,22 @@ const StartupYou = () => {
 
         {/* HERO IMAGE */}
         <div className="w-full h-[250px] md:h-[400px] relative">
-  <img
-    src={pic23}
-    alt="Startup You Program"
-    className="w-full h-full object-cover"
-    style={{ objectPosition: "center 35%" }}
-  />
+          <img
+            src={pic23}
+            alt="Startup You Program"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: "center 35%" }}
+          />
 
-  <div className="absolute inset-0 bg-black/30 flex items-center justify-center px-4">
-    <div className="bg-red-500/40 px-4 py-3 md:px-12 md:py-6 rounded-xl md:rounded-2xl text-center max-w-[90%] md:max-w-fit">
-      <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white">
-        Startup You
-      </h1>
-    </div>
-  </div>
-</div>
-        
+          <div className="absolute inset-0 bg-black/30 flex items-center justify-center px-4">
+            <div className="bg-red-500/40 px-4 py-3 md:px-12 md:py-6 rounded-xl md:rounded-2xl text-center max-w-[90%] md:max-w-fit">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white">
+                Startup You
+              </h1>
+            </div>
+          </div>
+        </div>
+
 
         {/* MAIN CONTENT */}
         <section className="py-16">
@@ -50,8 +50,8 @@ const StartupYou = () => {
                     key={item.name}
                     to={item.path}
                     className={`block px-5 py-4 border-b border-gray-800 transition ${item.name === "Startup You"
-                        ? "bg-red-600 text-white font-semibold"
-                        : "hover:bg-red-600"
+                      ? "bg-red-600 text-white font-semibold"
+                      : "hover:bg-red-600"
                       }`}
                   >
                     {item.name}

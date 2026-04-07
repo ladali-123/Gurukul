@@ -31,6 +31,7 @@ import AdmissionProcess from './pages/AdmissionProcess'
 import EnquiryForm from './pages/EnquiryForm'
 import Faqs from './pages/Faqs'
 import Testimonials from './pages/Testimonials'
+import BookList from './components/Booklist'
 
 // Boarding dropdown pages
 import BestBoardingHajipur from './pages/BestBoardingHajipur'
@@ -55,6 +56,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/leadership" element={<Leadership />} />
         <Route path="/admissions" element={<AdmissionProcess />} />
+        <Route path= "/booklist" element={<BookList />} />
         <Route path="/contact" element={<Contactus />} />
         <Route path="/boarding" element={<BestBoardingHajipur />} />
         <Route path="/careers" element={<Careers />} />

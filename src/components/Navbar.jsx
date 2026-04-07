@@ -14,12 +14,14 @@ const hiddenItems = ["Leadership", "Curriculum", "Boarding", "Beyond Academics"]
     { name: "Leadership", path: "/leadership" },
     { name: "About Us", hasDropdown: true },
     { name: "Admissions", hasDropdown: true },
+    {name : "Book List", path : "/booklist"},
     { name: "Curriculum", hasDropdown: true },
     { name: "Boarding", hasDropdown: true },
 { name: "Beyond Academics", path: "/beyond-academics/whole-education" },
     { name: "Gallery", path: "/gallery" },
     { name: "Careers", path: "/careers" },
     { name: "Contact Us", path: "/contact" },
+
   ];
 
 const aboutDropdownItems = [
@@ -37,6 +39,8 @@ const aboutDropdownItems = [
     { name: "FAQs", path: "/faqs" },
     
   ];
+
+  
 
   const curriculumDropdownItems = [
     { name: "IBS School Hajipur", path: "/curriculum/ibs-hajipur" },

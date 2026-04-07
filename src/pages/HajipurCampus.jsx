@@ -18,25 +18,25 @@ const HajipurCampus = () => {
     <>
       <Navbar />
 
-   <div className="pt-[90px] bg-black text-white min-h-screen">
+      <div className="pt-[90px] bg-black text-white min-h-screen">
 
-  {/* HERO IMAGE */}
-  <div className="w-full h-[250px] md:h-[400px] relative">
-    <img
-      src={pic2}
-      alt="Hajipur Campus"
-      className="w-full h-full object-cover"
-      style={{ objectPosition: "center 50%" }}
-    />
+        {/* HERO IMAGE */}
+        <div className="w-full h-[250px] md:h-[400px] relative">
+          <img
+            src={pic2}
+            alt="Hajipur Campus"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: "center 50%" }}
+          />
 
-    <div className="absolute inset-0 bg-black/30 flex items-center justify-center px-4">
-      <div className="bg-red-500/40 px-4 py-3 md:px-12 md:py-6 rounded-xl md:rounded-2xl text-center max-w-[90%] md:max-w-fit">
-        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white">
-          Hajipur Campus
-        </h1>
-      </div>
-    </div>
-  </div>
+          <div className="absolute inset-0 bg-black/30 flex items-center justify-center px-4">
+            <div className="bg-red-500/40 px-4 py-3 md:px-12 md:py-6 rounded-xl md:rounded-2xl text-center max-w-[90%] md:max-w-fit">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white">
+                Hajipur Campus
+              </h1>
+            </div>
+          </div>
+        </div>
 
 
 
@@ -51,11 +51,10 @@ const HajipurCampus = () => {
                   <Link
                     key={index}
                     to={item.path}
-                    className={`block px-5 py-4 border-b border-gray-800 transition ${
-                      item.name === "Hajipur Campus"
-                        ? "bg-red-600 text-white font-semibold"
-                        : "hover:bg-red-600"
-                    }`}
+                    className={`block px-5 py-4 border-b border-gray-800 transition ${item.name === "Hajipur Campus"
+                      ? "bg-red-600 text-white font-semibold"
+                      : "hover:bg-red-600"
+                      }`}
                   >
                     {item.name}
                   </Link>
@@ -69,7 +68,7 @@ const HajipurCampus = () => {
               {/* TOP: image left + text right */}
               <div className="flex flex-col md:flex-row gap-8 items-start">
                 {/* Left Image */}
-                
+
 
                 {/* Right Text */}
                 <div className="flex flex-col justify-start">
