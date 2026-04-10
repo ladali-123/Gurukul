@@ -2,162 +2,180 @@ import { useState } from "react";
 import pic2 from "../assets/pic2.jpg";
 
 const booksData = {
-  "Nursery": [{ sno: 1, name: "NEW MYLESTONE RUNWAY THE FUTURE" }],
-  "LKG": [{ sno: 1, name: "NEW MYLESTONE RUNWAY THE FUTURE" }],
-  "UKG": [{ sno: 1, name: "NEW MYLESTONE RUNWAY THE FUTURE" }],
+  "Nursery": [
+    { sno: 1, name: "NEW MYLESTONE RUNWAY THE FUTURE", publication: "S.CHAND SCHOOL " }
+  ],
+  "LKG": [
+    { sno: 1, name: "NEW MYLESTONE RUNWAY THE FUTURE", publication: "S.CHAND SCHOOL " }
+  ],
+  "UKG": [
+    { sno: 1, name: "NEW MYLESTONE RUNWAY THE FUTURE", publication: "S.CHAND SCHOOL " }
+  ],
+
   "Class 1": [
-    { sno: 1, name: "NEW MYLESTONE HINDI PART-1" },
-    { sno: 2, name: "NEW MYLESTONE HINDI PART-2" },
-    { sno: 3, name: "NEW MYLESTONE HINDI ABHYAS PUSTIKA" },
-    { sno: 4, name: "VYAKARAN VATIKA" },
-    { sno: 5, name: "ENGLISH INSPIRE" },
-    { sno: 6, name: "NEW MASTERING GRAMMAR" },
-    { sno: 7, name: "NEW LEARNING COMPOSITE MATHS" },
-    { sno: 8, name: "FUN WAY OF EXPLORING SCIENCE" },
-    { sno: 9, name: "MY BIG BOOK OF SOCIAL SCIENCE" },
-    { sno: 10, name: "AI CONNECT" },
-    { sno: 11, name: "G.K TIMES" },
-    { sno: 12, name: "ENHANCED APTITUDE REASONING" },
-    { sno: 13, name: "MAGIC STROKES CURSIVE WRITING" },
-    { sno: 14, name: "AKSHAR PRABH HINDI SHULEKH" },
-    { sno: 15, name: "ART SMART DRAWING" },
-    { sno: 16, name: "MY FIRST BOOK OF CONVERSATION" }
+
+    { sno: 1, name: "NEW MYLESTONE HINDI PART-1 & 2", publication: "S.CHAND SCHOOL" },
+    { sno: 2, name: "VYAKARAN VATIKA", publication: "MADHUBUN" },
+    { sno: 3, name: "ENGLISH INSPIRE", publication: "BURLINGTON" },
+    { sno: 4, name: "NEW MASTERING GRAMMAR", publication: "CREATIV KIDS" },
+    { sno: 5, name: "NEW LEARNING COMPOSITE MATHS", publication: "S.CHAND SCHOOL" },
+    { sno: 6, name: "FUN WAY OF EXPLORING SCIENCE", publication: "M.T.G" },
+    { sno: 7, name: "MY BIG BOOK OF SOCIAL SCIENCE", publication: "RATNA SAGAR" },
+    { sno: 8, name: "AI CONNECT", publication: "HEADWORD" },
+    { sno: 9, name: "G.K TIMES", publication: "GOYAL BROTHER" },
+    { sno: 10, name: "ENHANCED APTITUDE REASONING", publication: "BLUEPRINT" },
+    { sno: 11, name: "MAGIC STROKES CURSIVE WRITING", publication: "GLOBAL RISE" },
+    { sno: 12, name: "AKSHAR PRABH HINDI SHULEKH", publication: "SAMYAK" },
+    { sno: 13, name: "ART SMART DRAWING", publication: "TAPSYA" },
+    { sno: 14, name: "MY FIRST BOOK OF CONVERSATION", publication: "SURVI BOOKS" }
   ],
+
   "Class 2": [
-    { sno: 1, name: "NEW MYLESTONE HINDI PART-1" },
-    { sno: 2, name: "NEW MYLESTONE HINDI PART-2" },
-    { sno: 3, name: "NEW MYLESTONE HINDI ABHYAS PUSTIKA" },
-    { sno: 4, name: "VYAKARAN VATIKA" },
-    { sno: 5, name: "ENGLISH INSPIRE" },
-    { sno: 6, name: "NEW MASTERING GRAMMAR" },
-    { sno: 7, name: "NEW LEARNING COMPOSITE MATHS" },
-    { sno: 8, name: "FUN WAY OF EXPLORING SCIENCE" },
-    { sno: 9, name: "MY BIG BOOK OF SOCIAL SCIENCE" },
-    { sno: 10, name: "AI CONNECT" },
-    { sno: 11, name: "G.K TIMES" },
-    { sno: 12, name: "ENHANCED APTITUDE REASONING" },
-    { sno: 13, name: "MAGIC STROKES CURSIVE WRITING" },
-    { sno: 14, name: "AKSHAR PRABH HINDI SHULEKH" },
-    { sno: 15, name: "ART SMART DRAWING" },
-    { sno: 16, name: "MY FIRST BOOK OF CONVERSATION" }
+    { sno: 1, name: "NEW MYLESTONE HINDI PART-1 & 2", publication: "S.CHAND SCHOOL" },
+    { sno: 2, name: "VYAKARAN VATIKA", publication: "MADHUBUN" },
+    { sno: 3, name: "ENGLISH INSPIRE", publication: "BURLINGTON" },
+    { sno: 4, name: "NEW MASTERING GRAMMAR", publication: "CREATIV KIDS" },
+    { sno: 5, name: "NEW LEARNING COMPOSITE MATHS", publication: "S.CHAND SCHOOL" },
+    { sno: 6, name: "FUN WAY OF EXPLORING SCIENCE", publication: "M.T.G" },
+    { sno: 7, name: "MY BIG BOOK OF SOCIAL SCIENCE", publication: "RATNA SAGAR" },
+    { sno: 8, name: "AI CONNECT", publication: "HEADWORD" },
+    { sno: 9, name: "G.K TIMES", publication: "GOYAL BROTHER" },
+    { sno: 10, name: "ENHANCED APTITUDE REASONING", publication: "BLUEPRINT" },
+    { sno: 11, name: "MAGIC STROKES CURSIVE WRITING", publication: "GLOBAL RISE" },
+    { sno: 12, name: "AKSHAR PRABH HINDI SHULEKH", publication: "SAMYAK" },
+    { sno: 13, name: "ART SMART DRAWING", publication: "TAPSYA" },
+    { sno: 14, name: "MY FIRST BOOK OF CONVERSATION", publication: "SURVI BOOKS" }
   ],
+
   "Class 3": [
-    { sno: 1, name: "NEW MYLESTONE HINDI PART-1" },
-    { sno: 2, name: "NEW MYLESTONE HINDI PART-2" },
-    { sno: 3, name: "NEW MYLESTONE HINDI ABHYAS PUSTIKA" },
-    { sno: 4, name: "VYAKARAN VATIKA" },
-    { sno: 5, name: "ENGLISH INSPIRE" },
-    { sno: 6, name: "NEW MASTERING GRAMMAR" },
-    { sno: 7, name: "NEW LEARNING COMPOSITE MATHS" },
-    { sno: 8, name: "FUN WAY OF EXPLORING SCIENCE" },
-    { sno: 9, name: "MY BIG BOOK OF SOCIAL SCIENCE" },
-    { sno: 10, name: "AI CONNECT" },
-    { sno: 11, name: "G.K TIMES" },
-    { sno: 12, name: "ENHANCED APTITUDE REASONING" },
-    { sno: 13, name: "MAGIC STROKES CURSIVE WRITING" },
-    { sno: 14, name: "AKSHAR PRABH HINDI SHULEKH" },
-    { sno: 15, name: "ART SMART DRAWING" },
-    { sno: 16, name: "MY FIRST BOOK OF CONVERSATION" }
+    { sno: 1, name: "NEW MYLESTONE HINDI PART-1 & 2", publication: "S.CHAND SCHOOL" },
+    { sno: 2, name: "VYAKARAN VATIKA", publication: "MADHUBUN" },
+    { sno: 3, name: "ENGLISH INSPIRE", publication: "BURLINGTON" },
+    { sno: 4, name: "NEW MASTERING GRAMMAR", publication: "CREATIV KIDS" },
+    { sno: 5, name: "NEW LEARNING COMPOSITE MATHS", publication: "S.CHAND SCHOOL" },
+    { sno: 6, name: "FUN WAY OF EXPLORING SCIENCE", publication: "M.T.G" },
+    { sno: 7, name: "MY BIG BOOK OF SOCIAL SCIENCE", publication: "RATNA SAGAR" },
+    { sno: 8, name: "AI CONNECT", publication: "HEADWORD" },
+    { sno: 9, name: "G.K TIMES", publication: "GOYAL BROTHER" },
+    { sno: 10, name: "ENHANCED APTITUDE REASONING", publication: "BLUEPRINT" },
+    { sno: 11, name: "MAGIC STROKES CURSIVE WRITING", publication: "GLOBAL RISE" },
+    { sno: 12, name: "AKSHAR PRABH HINDI SHULEKH", publication: "SAMYAK" },
+    { sno: 13, name: "ART SMART DRAWING", publication: "TAPSYA" },
+    { sno: 14, name: "MY FIRST BOOK OF CONVERSATION", publication: "SURVI BOOKS" }
   ],
+
   "Class 4": [
-    { sno: 1, name: "NEW MYLESTONE HINDI PART-1" },
-    { sno: 2, name: "NEW MYLESTONE HINDI PART-2" },
-    { sno: 3, name: "NEW MYLESTONE HINDI ABHYAS PUSTIKA" },
-    { sno: 4, name: "VYAKARAN VATIKA" },
-    { sno: 5, name: "ENGLISH INSPIRE" },
-    { sno: 6, name: "NEW MASTERING GRAMMAR" },
-    { sno: 7, name: "NEW LEARNING COMPOSITE MATHS" },
-    { sno: 8, name: "FUN WAY OF EXPLORING SCIENCE" },
-    { sno: 9, name: "MY BIG BOOK OF SOCIAL SCIENCE" },
-    { sno: 10, name: "AI CONNECT" },
-    { sno: 11, name: "G.K TIMES" },
-    { sno: 12, name: "ENHANCED APTITUDE REASONING" },
-    { sno: 13, name: "MAGIC STROKES CURSIVE WRITING" },
-    { sno: 14, name: "AKSHAR PRABH HINDI SHULEKH" },
-    { sno: 15, name: "ART SMART DRAWING" },
-    { sno: 16, name: "MAP PRACTICES" },
-    { sno: 17, name: "MY FIRST BOOK OF CONVERSATION" }
+    { sno: 1, name: "NEW MYLESTONE HINDI PART-1 & 2", publication: "S.CHAND SCHOOL" },
+    { sno: 2, name: "VYAKARAN VATIKA", publication: "MADHUBUN" },
+    { sno: 3, name: "ENGLISH INSPIRE", publication: "BURLINGTON" },
+    { sno: 4, name: "NEW MASTERING GRAMMAR", publication: "CREATIV KIDS" },
+    { sno: 5, name: "NEW LEARNING COMPOSITE MATHS", publication: "S.CHAND SCHOOL" },
+    { sno: 6, name: "FUN WAY OF EXPLORING SCIENCE", publication: "M.T.G" },
+    { sno: 7, name: "MY BIG BOOK OF SOCIAL SCIENCE", publication: "RATNA SAGAR" },
+    { sno: 8, name: "AI CONNECT", publication: "HEADWORD" },
+    { sno: 9, name: "G.K TIMES", publication: "GOYAL BROTHER" },
+    { sno: 10, name: "ENHANCED APTITUDE REASONING", publication: "BLUEPRINT" },
+    { sno: 11, name: "MAGIC STROKES CURSIVE WRITING", publication: "GLOBAL RISE" },
+    { sno: 12, name: "AKSHAR PRABH HINDI SHULEKH", publication: "SAMYAK" },
+    { sno: 13, name: "ART SMART DRAWING", publication: "TAPSYA" },
+    { sno: 14, name: "MAP PRACTICES", publication: "RATNA SAGAR" },
+    { sno: 15, name: "MY FIRST BOOK OF CONVERSATION", publication: "SURVI BOOKS" }
   ],
+
   "Class 5": [
-    { sno: 1, name: "NEW MYLESTONE HINDI PART-1" },
-    { sno: 2, name: "NEW MYLESTONE HINDI PART-2" },
-    { sno: 3, name: "NEW MYLESTONE HINDI ABHYAS PUSTIKA" },
-    { sno: 4, name: "VYAKARAN VATIKA" },
-    { sno: 5, name: "ENGLISH INSPIRE" },
-    { sno: 6, name: "NEW MASTERING GRAMMAR" },
-    { sno: 7, name: "NEW LEARNING COMPOSITE MATHS" },
-    { sno: 8, name: "FUN WAY OF EXPLORING SCIENCE" },
-    { sno: 9, name: "MY BIG BOOK OF SOCIAL SCIENCE" },
-    { sno: 10, name: "AI CONNECT" },
-    { sno: 11, name: "G.K TIMES" },
-    { sno: 12, name: "ENHANCED APTITUDE REASONING" },
-    { sno: 13, name: "ANANTA SANSKRIT" },
-    { sno: 14, name: "KANIKA SANSKRIT VYAKARAN" },
-    { sno: 15, name: "ART SMART DRAWING" },
-    { sno: 16, name: "MAP PRACTICES" },
-    { sno: 17, name: "MY FIRST BOOK OF CONVERSATION" }
+    { sno: 1, name: "NEW MYLESTONE HINDI PART-1 & 2", publication: "S.CHAND SCHOOL" },
+    { sno: 2, name: "VYAKARAN VATIKA", publication: "MADHUBUN" },
+    { sno: 3, name: "ENGLISH INSPIRE", publication: "BURLINGTON" },
+    { sno: 4, name: "NEW MASTERING GRAMMAR", publication: "CREATIV KIDS" },
+    { sno: 5, name: "NEW LEARNING COMPOSITE MATHS", publication: "S.CHAND SCHOOL" },
+    { sno: 6, name: "FUN WAY OF EXPLORING SCIENCE", publication: "M.T.G" },
+    { sno: 7, name: "MY BIG BOOK OF SOCIAL SCIENCE", publication: "RATNA SAGAR" },
+    { sno: 8, name: "AI CONNECT", publication: "HEADWORD" },
+    { sno: 9, name: "G.K TIMES", publication: "GOYAL BROTHER" },
+    { sno: 10, name: "ENHANCED APTITUDE REASONING", publication: "BLUEPRINT" },
+    { sno: 11, name: "ANANTA SANSKRIT", publication: "HUDSON PRESS" },
+    { sno: 12, name: "KANIKA SANSKRIT VYAKARAN", publication: "P.P PUBLICATION" },
+    { sno: 13, name: "ART SMART DRAWING", publication: "TAPSYA" },
+    { sno: 14, name: "MAP PRACTICES", publication: "RATNA SAGAR" },
+    { sno: 15, name: "MY FIRST BOOK OF CONVERSATION", publication: "SURVI BOOKS" }
   ],
+
   "Class 6": [
-    { sno: 1, name: "NEW MYLESTONE HINDI PART-1" },
-    { sno: 2, name: "NEW MYLESTONE HINDI PART-2" },
-    { sno: 3, name: "NEW MYLESTONE HINDI ABHYAS PUSTIKA" },
-    { sno: 4, name: "VYAKARAN KUTUMB" },
-    { sno: 5, name: "ENGLISH INSPIRE" },
-    { sno: 6, name: "WONDER ENGLISH GRAMMAR" },
-    { sno: 7, name: "MATHEMATICS" },
-    { sno: 8, name: "SCIENCE" },
-    { sno: 9, name: "SOCIAL SCIENCE" },
-    { sno: 10, name: "HEXA ONE BYTE AT A TIME COMPUTER SCIENCE" },
-    { sno: 11, name: "G.K TIMES" },
-    { sno: 12, name: "REASONING MASTERY" },
-    { sno: 13, name: "ANANTA SANSKRIT" },
-    { sno: 14, name: "KANIKA SANSKRIT VYAKARAN" },
-    { sno: 15, name: "ART SMART DRAWING" },
-    { sno: 16, name: "MAP PRACTICES" },
-    { sno: 17, name: "SCIENCE LAB MANUAL" },
-    { sno: 18, name: "TALK ENGLISH CONVERSATION" }
+    { sno: 1, name: "NEW MYLESTONE HINDI PART-1 & 2", publication: "S.CHAND SCHOOL" },
+    { sno: 2, name: "VYAKARAN KUTUMB", publication: "SURVI SAPPHIRE" },
+    { sno: 3, name: "ENGLISH INSPIRE", publication: "BURLINGTON" },
+    { sno: 4, name: "WONDER ENGLISH GRAMMAR", publication: "DOUBLEW" },
+    { sno: 5, name: "MATHEMATICS", publication: "BHARTI BHAWAN" },
+    { sno: 6, name: "SCIENCE", publication: "S.CHAND SCHOOL" },
+    { sno: 7, name: "SOCAIL SCIENCE", publication: "FUTURE KIDS" },
+    { sno: 8, name: "HEXA ONE BYTE AT A TIME COMPUTER SCIENCE", publication: "UOLO" },
+    { sno: 9, name: "G.K TIMES", publication: "GOYAL BROTHER" },
+    { sno: 10, name: "REASONING MASTERY", publication: "M.T.G" }
   ],
+
   "Class 7": [
-    { sno: 1, name: "NEW MYLESTONE HINDI PART-1" },
-    { sno: 2, name: "NEW MYLESTONE HINDI PART-2" },
-    { sno: 3, name: "NEW MYLESTONE HINDI ABHYAS PUSTIKA" },
-    { sno: 4, name: "VYAKARAN KUTUMB" },
-    { sno: 5, name: "ENGLISH INSPIRE" },
-    { sno: 6, name: "WONDER ENGLISH GRAMMAR" },
-    { sno: 7, name: "MATHEMATICS R.S. AGGARWAL PART-1" },
-    { sno: 8, name: "MATHEMATICS R.S. AGGARWAL PART-2" },
-    { sno: 9, name: "SCIENCE" },
-    { sno: 10, name: "SOCIAL SCIENCE PART-1" },
-    { sno: 11, name: "SOCIAL SCIENCE PART-2" },
-    { sno: 12, name: "HEXA ONE BYTE AT A TIME COMPUTER SCIENCE" },
-    { sno: 13, name: "G K TIMES" },
-    { sno: 14, name: "REASONING MASTERY" },
-    { sno: 15, name: "ANANTA SANSKRIT" },
-    { sno: 16, name: "KANIKA SANSKRIT VYAKARAN" },
-    { sno: 17, name: "ART SMART DRAWING" },
-    { sno: 18, name: "MAP PRACTICES" },
-    { sno: 19, name: "SCIENCE LAB MANUAL" },
-    { sno: 20, name: "TALK ENGLISH CONVERSATION" }
+    { sno: 1, name: "NEW MYLESTONE HINDI PART-1 & 2", publication: "S.CHAND SCHOOL" },
+    { sno: 2, name: "VYAKARAN KUTUMB", publication: "SURVI SAPPHIRE" },
+    { sno: 3, name: "ENGLISH INSPIRE", publication: "BURLINGTON" },
+    { sno: 4, name: "WONDER ENGLISH GRAMMAR", publication: "DOUBLEW" },
+    { sno: 5, name: "MATHEMATICS R.S AGGARWAL PART-1", publication: "BHARTI BHAWAN" },
+    { sno: 6, name: "MATHEMATICS R.S AGGARWAL PART-2", publication: "BHARTI BHAWAN" },
+    { sno: 7, name: "SCIENCE", publication: "S.CHAND SCHOOL" },
+    { sno: 8, name: "SOCAIL SCIENCE part-1 & 2", publication: "FUTURE KIDS" },
+    { sno: 9, name: "HEXA ONE BYTE AT A TIME COMPUTER SCIENCE", publication: "UOLO" },
+    { sno: 10, name: "G.K TIMES", publication: "GOYAL BROTHER" },
+    { sno: 11, name: "REASONING MASTERY", publication: "M.T.G" },
+    { sno: 12, name: "ANANTA SANSKRIT", publication: "HUDSON PRESS" },
+    { sno: 13, name: "KANIKA SANSKRIT VYAKARAN", publication: "P.P PUBLICATION" },
+    { sno: 14, name: "ART SMART DRAWING", publication: "TAPSYA" },
+    { sno: 15, name: "MAP PRACTICES", publication: "RATNA SAGAR" },
+    { sno: 16, name: "SCIENCE LAB MANUAL", publication: "DOUBLEW" },
+    { sno: 17, name: "TALK ENGLISH CONVERSATION", publication: "KID'S WORLD" }
   ],
+
   "Class 8": [
-    { sno: 1, name: "NEW MYLESTONE HINDI PART-1" },
-    { sno: 2, name: "NEW MYLESTONE HINDI PART-2" },
-    { sno: 3, name: "NEW MYLESTONE HINDI ABHYAS PUSTIKA" },
-    { sno: 4, name: "VYAKARAN KUTUMB" },
-    { sno: 5, name: "ENGLISH INSPIRE" },
-    { sno: 6, name: "WONDER ENGLISH GRAMMAR" },
-    { sno: 7, name: "MATHEMATICS R.S. AGGARWAL PART-1" },
-    { sno: 8, name: "SCIENCE" },
-    { sno: 9, name: "SOCIAL SCIENCE PART-1" },
-    { sno: 10, name: "HEXA ONE BYTE AT A TIME COMPUTER SCIENCE" },
-    { sno: 11, name: "GK Times" },
-    { sno: 12, name: "REASONING MASTERY" },
-    { sno: 13, name: "ANANTA SANSKRIT" },
-    { sno: 14, name: "KANIKA SANSKRIT VYAKARAN" },
-    { sno: 15, name: "ART SMART DRAWING" },
-    { sno: 16, name: "MAP PRACTICES" },
-    { sno: 17, name: "SCIENCE LAB MANUAL" },
-    { sno: 18, name: "TALK ENGLISH CONVERSATION" }
+    { sno: 1, name: "NEW MYLESTONE HINDI PART-1 & 2", publication: "S.CHAND SCHOOL" },
+    { sno: 2, name: "VYAKARAN KUTUMB", publication: "SURVI SAPPHIRE" },
+    { sno: 3, name: "ENGLISH INSPIRE", publication: "BURLINGTON" },
+    { sno: 4, name: "WONDER ENGLISH GRAMMAR", publication: "DOUBLEW" },
+    { sno: 5, name: "MATHEMATICS R.S AGGARWAL PART-1", publication: "BHARTI BHAWAN" },
+    { sno: 6, name: "SCIENCE", publication: "S.CHAND SCHOOL" },
+    { sno: 7, name: "SOCAIL SCIENCE PART-1", publication: "FUTURE KIDS" },
+    { sno: 8, name: "HEXA ONE BYTE AT A TIME COMPUTER SCIENCE", publication: "UOLO" },
+    { sno: 9, name: "G.K TIMES", publication: "GOYAL BROTHER" },
+    { sno: 10, name: "REASONING MASTERY", publication: "M.T.G" },
+    { sno: 11, name: "ANANTA SANSKRIT", publication: "HUDSON PRESS" },
+    { sno: 12, name: "KANIKA SANSKRIT VYAKARAN", publication: "P.P PUBLICATION" },
+    { sno: 13, name: "ART SMART DRAWING", publication: "TAPSYA" },
+    { sno: 14, name: "MAP PRACTICES", publication: "RATNA SAGAR" },
+    { sno: 15, name: "SCIENCE LAB MANUAL", publication: "DOUBLEW" },
+    { sno: 16, name: "TALK ENGLISH CONVERSATION", publication: "KID'S WORLD" },
+    { sno: 17, name: "MATHEMATICS R.S AGGARWAL PART-2", publication: "BHARTI BHAWAN" },
+    { sno: 18, name: "SOCAIL SCIENCE PART-2", publication: "FUTURE KIDS" }
+  ],
+
+  "Class 9": [
+    { sno: 1, name: "Dhanpat Rai Pub. R.D. Sharma & NCERT", publication: "" },
+    { sno: 2, name: "Kaveri (NCERT)", publication: "Course :-B" },
+    { sno: 3, name: "कक्षलतज् और कृलतका– । (NCERT)", publication: "कोस ि :–ए दहनद् ी वय् ाकरण (सरसव् ती प्रकाशन)" },
+    { sno: 4, name: "Sanskrit", publication: "To be announced" },
+    { sno: 5, name: "Sanskrit Gram.", publication: "To be announced" },
+    { sno: 6, name: "Social Science", publication: "NCERT" },
+    { sno: 7, name: "Science", publication: "S. Chand Pub. & NCERT" },
+    { sno: 8, name: "Touch Pad Orange Pub.", publication: "(Optional) Head Word Publishing Company" },
+    { sno: 9, name: "Urdu (Jaan Pehchan)", publication: "" }
+  ],
+
+  "Class 10": [
+    { sno: 1, name: "Dhanpat Rai Pub. R.D. Sharma & NCERT", publication: "" },
+    { sno: 2, name: "First Flight Footprints without feet", publication: "Course :-B" },
+    { sno: 3, name: "कक्षलतज् –।। कृलतका – ।।", publication: "कोस ि :–ए दहनद् ी वय् ाकरण (सरसव् ती प्रकाशन)" },
+    { sno: 4, name: "शेमुिी भाग – ।।", publication: "" },
+    { sno: 5, name: "संस्कृत मखणका भाग – ।।", publication: "" },
+    { sno: 6, name: "NCERT", publication: "" },
+    { sno: 7, name: "S. Chand Pul. & NCERT", publication: "(Optional) Head Word Publishing Company" },
+    { sno: 8, name: "Touch Pad Orange Pub.", publication: "" },
+    { sno: 9, name: "गुलजार उदू ि नवाये उदू ि कवायद उदू ि", publication: "" }
   ]
 };
 
@@ -165,7 +183,7 @@ const classes = [
   "Nursery", "LKG", "UKG",
   "Class 1", "Class 2", "Class 3",
   "Class 4", "Class 5", "Class 6",
-  "Class 7", "Class 8"
+  "Class 7", "Class 8", "Class 9", "Class 10"
 ];
 
 export default function SchoolBooks() {
@@ -191,10 +209,9 @@ export default function SchoolBooks() {
             <button
               key={cls}
               onClick={() => setActiveClass(cls)}
-              className={`whitespace-nowrap px-6 py-3 rounded-full text-sm md:text-base font-semibold transition-all duration-300 border
-                ${activeClass === cls
-                  ? "bg-red-600 text-white border-red-400 shadow-[0_0_12px_rgba(255,0,0,0.7)] scale-105"
-                  : "bg-white/5 text-gray-300 border-white/10 hover:bg-white/10 hover:scale-105"
+              className={`whitespace-nowrap px-6 py-3 rounded-full text-sm md:text-base font-semibold transition-all duration-300 border ${activeClass === cls
+                  ? "bg-red-600 text-white border-red-400"
+                  : "bg-white/5 text-gray-300 border-white/10"
                 }`}
             >
               {cls}
@@ -205,35 +222,27 @@ export default function SchoolBooks() {
 
       {/* BOOK LIST */}
       <div className="px-4 pt-6 pb-12">
-        <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl">
+        <div className="max-w-5xl mx-auto rounded-2xl overflow-hidden bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl">
 
           {/* HEADER */}
-          <div className="flex justify-between items-center px-6 py-4 bg-gradient-to-r from-red-700 to-red-900">
-            <h2 className="font-semibold text-lg text-white">{activeClass} Books</h2>
-            <span className="bg-white text-red-700 px-3 py-1 rounded-full text-sm font-bold">
-              {booksData[activeClass]?.length}
-            </span>
+          <div className="grid grid-cols-3 px-6 py-4 bg-gradient-to-r from-red-700 to-red-900 text-white font-semibold">
+            <div>S.No</div>
+            <div>Book Name</div>
+            <div>Publication</div>
           </div>
 
           {/* LIST */}
           {booksData[activeClass]?.map((book, index) => (
             <div
               key={book.sno}
-              className={`flex items-center gap-4 px-6 py-4 transition-all duration-300
-                ${index % 2 === 0 ? "bg-white/5" : "bg-transparent"}
-                hover:bg-red-500/10`}
+              className={`grid grid-cols-3 items-center px-6 py-4 text-sm md:text-base ${index % 2 === 0 ? "bg-white/5" : "bg-transparent"
+                } hover:bg-red-500/10`}
             >
-              <div className="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-red-600 to-red-800 text-white text-sm font-bold shadow-md">
-                {book.sno}
-              </div>
-              <div className="text-sm md:text-base font-medium tracking-wide text-white">{book.name}</div>
+              <div className="font-bold">{book.sno}</div>   {/* 👈 यहीं change करना है */}
+              <div>{book.name}</div>
+              <div className="text-gray-300">{book.publication}</div>
             </div>
           ))}
-
-          {/* EMPTY STATE */}
-          {booksData[activeClass]?.length === 0 && (
-            <p className="text-center py-6 text-gray-400">No books available</p>
-          )}
 
         </div>
       </div>
